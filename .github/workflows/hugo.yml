@@ -57,7 +57,7 @@ jobs:
 
       # Step 1: Clone the repository source code onto the runner
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive  # Fetch Git submodules if any exist
           fetch-depth: 0         # Fetch all history for accurate file modification dates
