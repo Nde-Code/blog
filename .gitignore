@@ -1,0 +1,11 @@
+.hugo_build.lock
+resources/
+_vendor/
+
+public/
+
+node_modules/
+npm-debug.log
+
+.DS_Store
+Thumbs.db

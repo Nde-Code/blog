@@ -1,0 +1,15 @@
+<div class="color-bg-subtle rounded-2 p-3 mb-3">
+    <h3 class="h5 mb-2">{{ i18n "aboutMe" | default "About Me:" }}</h3>
+    <div class="d-flex flex-items-center mb-2">
+        <img src="/avatar.webp" alt="Author" class="avatar avatar-6 mr-2" width="48" height="48">
+        <div>
+            <strong class="d-block">{{ site.Params.author | default "Nathan Debilloëz" }}</strong>
+            <a class="f6 Link--primary" href="{{ i18n "authorRole" }}" target="_blank" rel="noopener">
+                {{ i18n "authorRole" | default "Portfolio" }}
+            </a>
+        </div>
+    </div>
+    <p class="f6 color-fg-muted mb-0">
+        {{ i18n "authorBio" | default "Interested in and curious about everything, I will use this website as a place to share my knowledge across a variety of fields." }}
+    </p>
+</div>

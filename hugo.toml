@@ -1,0 +1,90 @@
+baseURL = "https://nde-code.github.io/blog/"
+title = "Nathan Debilloëz - Blog"
+
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+
+[module]
+  [[module.imports]]
+    path = "go.ngs.io/hugo-primer-blog"
+
+[outputs]
+  home = ["HTML", "RSS", "LLMS"]
+  page = ["HTML", "Markdown"]
+
+# Sidebar:
+[[params.sidebarModules]]
+  partial = "aboutme"
+
+[[params.sidebarModules]]
+  partial = "recentPosts"
+
+[[params.sidebarModules]]
+  partial = "tags"
+
+[[params.sidebarModules]]
+  partial = "archive"
+
+# Settings:
+[params]
+  sidebar = true            
+  recentPostsCount = 5      
+  defaultTheme = "auto"     
+  dateFormat = "2006-01-02"
+  showReadingTime = true
+  showAuthor = true
+  showShareButtons = true
+  primaryColor = "#2FB4E8"
+
+  # Favicons (fichiers à placer dans le dossier static/)
+  faviconIco = "favicon.ico"
+  faviconPng = "favicon.png"
+
+  # Sous-table des réseaux sociaux (placée en fin de section params)
+  [params.social]
+    github = "Nde-Code"
+    x = "nde_code"
+    reddit="nde_code"
+
+# Navigation:
+[languages]
+  
+  # configuration (fr)
+  [languages.fr]
+    languageName = "Français"
+    weight = 1
+    contentDir = "content/fr"
+    title = "Nathan Debilloëz - Blog" # Optionnel : titre spécifique en FR
+    
+    [[languages.fr.menus.main]]
+      name = "Accueil"
+      url = "/"
+      weight = 1
+    [[languages.fr.menus.main]]
+      name = "Articles"
+      url = "/posts/"
+      weight = 2
+    [[languages.fr.menus.main]]
+      name = "Status"
+      url = "https://nde-status.instatus.com/"
+      weight = 3
+
+  # configuration (en)
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en"
+    title = "Nathan Debilloëz - Blog"
+    
+    [[languages.en.menus.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[languages.en.menus.main]]
+      name = "Posts"
+      url = "/posts/"
+      weight = 2
+    [[languages.en.menus.main]]
+      name = "Status"
+      url = "https://nde-status.instatus.com/"
+      weight = 3
