@@ -27,7 +27,7 @@ Le dépôt dispose d'un environnement de développement préconfiguré pour GitH
 ### Installation locale (depuis votre machine):
 
 1. Ouvrez un terminal à la racine du projet.
-2. Vérifiez votre environnement en exécutant : `./check_env.sh`
+2. Vérifiez votre environnement en exécutant : `bash env.sh`
 3. Si le script indique que tout est correct, vous pouvez passer à la suite. Autrement, installez les outils manquants via les liens fournis dans les prérequis.
 4. Téléchargez ou mettez à jour les modules Hugo : `hugo mod get -u`
 5. Démarrez le serveur de développement local : `hugo server`

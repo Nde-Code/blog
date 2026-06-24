@@ -91,7 +91,7 @@ jobs:
           curl -sLO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
-          echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}" # Add to system PATH
+          echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
 
       # Step 7: Download and install Hugo Extended binary
       - name: Install Hugo
@@ -100,7 +100,7 @@ jobs:
           mkdir "${HOME}/.local/hugo"
           tar -C "${HOME}/.local/hugo" -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
           rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}" # Add to system PATH
+          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
 
       # Step 8: Log installed versions in the terminal console for debugging
       - name: Verify installations
