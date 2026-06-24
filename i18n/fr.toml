@@ -1,0 +1,54 @@
+# Navigation:
+mainNavigation = "Navigation principale"
+footerNavigation = "Navigation du pied de page"
+selectLanguage = "Choisir la langue"
+
+# Theme:
+toggleTheme = "Changer de thème"
+themeLight = "Thème clair"
+themeDark = "Thème sombre"
+themeAuto = "Thème du système"
+
+# Content:
+latestPosts = "Derniers articles"
+recentPosts = "Articles récents"
+relatedPosts = "Articles similaires"
+noPosts = "Aucun article trouvé."
+
+# Taxonomy:
+tags = "Mots-clés"
+categories = "Catégories"
+archive = "Archives"
+links = "Liens"
+
+# Reading:
+minRead = "minutes de lecture"
+
+# Share:
+share = "Partager"
+
+# Pagination:
+pagination = "Pagination"
+previous = "Précédent"
+next = "Suivant"
+previousPage = "Page précédente"
+nextPage = "Page suivante"
+page = "Page"
+
+# 404 page:
+pageNotFound = "La page que vous recherchez n'existe pas."
+backToHome = "Retour à l'accueil"
+
+# Sidebar custom modules:
+aboutMe = "À propos de moi:"
+authorRole = "https://nde-code.github.io/"
+authorBio = "Intéressé et curieux de tout, je vais utiliser ce site comme un lieu de partage de mes connaissances dans divers domaines."
+followMe = "Me suivre"
+
+# Sidebar:
+showMore = "Afficher plus"
+showLess = "Afficher moins"
+viewAll = "Tout voir"
+
+# Footer:
+poweredBy = "Propulsé par"

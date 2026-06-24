@@ -1,0 +1,13 @@
+{
+    "name": "Hugo Codespaces setup script",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": { "version": "latest" },
+        "ghcr.io/devcontainers/features/hugo:1": {
+            "version": "latest",
+            "extended": true
+        },
+        "ghcr.io/devcontainers/features/node:1": { "version": "24" }
+    },
+    "postCreateCommand": "hugo mod get -u && chmod +x env.sh && ./env.sh"
+}
