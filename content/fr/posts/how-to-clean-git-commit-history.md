@@ -3,7 +3,7 @@ title: "Réinitialiser l'historique Git d'un projet."
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
-categories: ["Générale"]
+categories: ["Git"]
 author: "Nathan Debilloëz"
 description: "Cela peut paraître évident, mais c'est une manipulation que l'on doit parfois effectuer (bien plus souvent qu'on ne le pense). Face au peu d'articles traitant de ce sujet, j'ai décidé d'en rédiger un."
 ---
@@ -70,7 +70,7 @@ git remote add origin https://github.com/<NOM>/<NOM_PROJET>.git
 git push -u origin main --force
 ```
 
-> **Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: git `push origin --delete <nom_de_la_branche>`
+> **Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: `git push origin --delete <nom_de_la_branche>`
 
 ## 4. Conclusion:
 

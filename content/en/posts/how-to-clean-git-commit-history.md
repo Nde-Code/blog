@@ -3,7 +3,7 @@ title: "Resetting a Project's Git History."
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
-categories: ["General"]
+categories: ["Git"]
 author: "Nathan Debilloëz"
 description: "This might seem obvious, but it is something we occasionally need to do (even more often than one might think). Given the scarcity of articles on this specific process, I decided to write one myself."
 ---
