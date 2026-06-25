@@ -95,6 +95,8 @@ Les dossiers et les fichiers du projet sont organisés comme suit:
 │   └── dependabot.yaml    # Configuration pour les mises à jour auto des dépendances
 ├── archetypes/
 │   └── default.md         # Modèle pour la création automatique des nouveaux articles
+├── assets/
+│   └── css/custom.css     # Surcharge du style du thème afin d'y ajouter des éléments si nécessaire
 ├── content/
 │   ├── en/posts/          # Articles du blog en Anglais
 │   └── fr/posts/          # Articles du blog en Français (langue principale)
