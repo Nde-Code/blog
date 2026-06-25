@@ -62,7 +62,7 @@ defaultContentLanguageInSubdir = false
       weight = 4
     [[languages.fr.menus.main]]
       name = "Articles"
-      url = "/posts/"
+      url = "posts/"
       weight = 2
     [[languages.fr.menus.main]]
       name = "Status"
@@ -82,7 +82,7 @@ defaultContentLanguageInSubdir = false
       weight = 4
     [[languages.en.menus.main]]
       name = "Posts"
-      url = "/posts/"
+      url = "posts/"
       weight = 2
     [[languages.en.menus.main]]
       name = "Status"
