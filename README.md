@@ -32,6 +32,12 @@ Le dépôt dispose d'un environnement de développement préconfiguré pour GitH
 4. Téléchargez ou mettez à jour les modules Hugo : `hugo mod get -u`
 5. Démarrez le serveur de développement local : `hugo server`
 
+### Déploiement en ligne:
+
+Le projet intègre un *workflow* [GitHub Actions](https://docs.github.com/fr/actions) qui déploie automatiquement le site sur GitHub Pages à chaque nouvelle modification poussée (*push*) sur la branche `main`, le tout sans configuration préalable. 
+
+Le fichier de configuration est consultable ici: [.github/workflows/hugo.yaml](.github/workflows/hugo.yaml). Sa structure n'étant pas triviale, il est fortement recommandé de bien en comprendre le fonctionnement avant d'y apporter la moindre modification.
+
 ## 🏗️ Création de contenu:
 
 Les articles sont stockés dans le dossier `content/` et s'appuient sur un *archetype* (voir la [documentation Hugo](https://gohugo.io/content-management/archetypes/#article)) prédéfini pour faciliter la configuration initiale.
