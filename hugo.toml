@@ -45,6 +45,7 @@ defaultContentLanguageInSubdir = false
     github = "Nde-Code"
     x = "nde_code"
     reddit="nde_code"
+    kaggle = "nathandebilloez"
 
 # Navigation:
 [languages]

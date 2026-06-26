@@ -44,6 +44,13 @@
                     </svg>
                 </a>
                 {{- end -}}
+                {{- with .kaggle -}}
+                <a href="https://www.kaggle.com/{{ . }}" class="Link--secondary px-2" aria-label="Kaggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" class="octicon">
+                        <path d="M12.186 16c-.347 0-.662-.16-.856-.432L7.33 9.697 5.074 11.5v3.644c0 .473-.393.856-.87.856H3.342a.859.859 0 0 1-.856-.856V.856C2.486.383 2.88 0 3.342 0h.862c.477 0 .87.383.87.856v7.356L10.99.645a1.05 1.05 0 0 1 .843-.413h1.293c.362 0 .646.368.523.71L9.123 7.82l4.83 7.29a.604.604 0 0 1-.504.912l-1.263-.021Z"></path>
+                    </svg>
+                </a>
+                {{- end -}}
             </div>
             {{- end -}}
         </div>
