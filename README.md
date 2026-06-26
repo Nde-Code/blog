@@ -58,7 +58,7 @@ Vous pouvez procéder de deux manières différentes :
 
 Exécutez la commande suivante dans votre terminal :
 
-```bash
+```text
 hugo new <langue>/posts/mon-super-article.md
 ```
 
