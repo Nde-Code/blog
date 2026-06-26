@@ -1,5 +1,5 @@
 ---
-title: "Resetting a Project's Git History."
+title: "Resetting a project's Git history."
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
