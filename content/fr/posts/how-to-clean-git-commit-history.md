@@ -8,7 +8,7 @@ author: "Nathan Debilloëz"
 description: "Cela peut paraître évident, mais c'est une manipulation que l'on doit parfois effectuer (bien plus souvent qu'on ne le pense). Face au peu d'articles traitant de ce sujet, j'ai décidé d'en rédiger un."
 ---
 
-# Réinitialiser l'historique Git d'un projet:
+# Introduction:
 
 Ce guide explique comment supprimer complètement l'historique des commits, réinitialiser le dépôt localement et forcer la mise à jour sur GitHub (ou tout autre service distant).
 
@@ -20,7 +20,7 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 > **⚠️ Attention :** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche principale sur le dépôt distant. Si d'autres personnes collaborent sur ce projet, elles devront obligatoirement supprimer leur version locale et recloner le dépôt pour éviter des conflits majeurs.
 
-> **Préalable :** effectuez une sauvegarde (backup) du dépôt dont vous souhaitez supprimer l'historique des commits.
+> **Préalable :** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
 
 ## 1. Nettoyage local:
 

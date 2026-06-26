@@ -8,7 +8,7 @@ author: "Nathan Debilloëz"
 description: "This might seem obvious, but it is something we occasionally need to do (even more often than one might think). Given the scarcity of articles on this specific process, I decided to write one myself."
 ---
 
-# Resetting a Project's Git History:
+# Introduction:
 
 This guide explains how to completely delete commit history, reset the repository locally, and force-push the updates to GitHub (or any other remote service).
 
@@ -74,4 +74,4 @@ git push -u origin main --force
 
 ## 4. Conclusion:
 
-After this operation, the repository will be completely cleaned up—a true factory reset—and as fresh as day one.
+After this operation, the repository will be completely cleaned up and fresh as day one.
