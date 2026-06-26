@@ -1,26 +1,19 @@
 {{- $tags := .Site.Taxonomies.tags -}}
 {{- if $tags -}}
 <div class="color-bg-subtle rounded-2 p-3 mb-3">
-  <h3 class="h5 mb-2">
-    <a href="{{ with $.Site.GetPage "taxonomy" "tags" }}{{ .RelPermalink }}{{ end }}" class="Link--primary">
-      {{ i18n "tags" | default "Tags" }}
-    </a>
-  </h3>
-  <div class="sidebar-collapsible d-flex flex-wrap" style="gap: 0.5rem;"
-    data-max-height="150"
-    data-view-all="{{ with $.Site.GetPage "taxonomy" "tags" }}{{ .RelPermalink }}{{ end }}"
-    data-label-more="{{ i18n "showMore" | default "Show more" }}"
-    data-label-less="{{ i18n "showLess" | default "Show less" }}"
-    data-label-view-all="{{ i18n "viewAll" | default "View all" }}">
-    
-    {{- range $name, $taxonomy := $tags -}}
-    {{- with $.Site.GetPage (printf "/tags/%s" ($name | urlize)) -}}
-    <a href="{{ .RelPermalink }}" class="topic-tag">
-      {{ $name }}
-    </a>
-    {{- end -}}
-    {{- end -}}
-    
-  </div>
+    <h3 class="h5 mb-2">
+        <a href="{{ with $.Site.GetPage "taxonomy" "tags" }}{{ .RelPermalink }}{{ end }}" class="Link--primary">
+            {{ i18n "tags" | default "Tags" }}
+        </a>
+    </h3>
+    <div class="sidebar-collapsible d-flex flex-wrap" style="gap: 0.5rem;" data-max-height="150" data-view-all="{{ with $.Site.GetPage "taxonomy" "tags" }}{{ .RelPermalink }}{{ end }}" data-label-more="{{ i18n "showMore" | default "Show more" }}" data-label-less="{{ i18n "showLess" | default "Show less" }}" data-label-view-all="{{ i18n "viewAll" | default "View all" }}">
+        {{- range $name, $taxonomy := $tags -}}
+        {{- with $.Site.GetPage (printf "/tags/%s" ($name | urlize)) -}}
+        <a href="{{ .RelPermalink }}" class="topic-tag">
+            {{ $name }}
+        </a>
+        {{- end -}}
+        {{- end -}}
+    </div>
 </div>
 {{- end -}}
