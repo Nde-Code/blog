@@ -64,7 +64,7 @@ git branch -M main
 
 ```bash
 # Add your remote repository address
-git remote add origin [https://github.com/](https://github.com/)<OWNER>/<PROJECT_NAME>.git
+git remote add origin https://github.com/<NAME>/<PROJECT_NAME>.git
 
 # Overwrite the remote history with the new local commit
 git push -u origin main --force
