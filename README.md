@@ -91,28 +91,30 @@ Les dossiers et les fichiers du projet sont organisés comme suit:
 ```text
 ├── .github/
 │   ├── workflows/
-│   │   └── hugo.yaml      # Workflow GitHub Actions pour compiler et publier le blog
-│   └── dependabot.yaml    # Configuration pour les mises à jour auto des dépendances
+│   │   └── hugo.yaml      # Workflow GitHub Actions pour compiler et publier le blog.
+│   └── dependabot.yaml    # Configuration pour les mises à jour auto des dépendances.
+├── .vscode/
+│   └── settings.json      # Configuration très simple de VS Code pour masquer les fichiers inutiles.
 ├── archetypes/
-│   └── default.md         # Modèle pour la création automatique des nouveaux articles
+│   └── default.md         # Modèle pour la création automatique des nouveaux articles.
 ├── assets/
-│   └── css/custom.css     # Surcharge du style du thème afin d'y ajouter des éléments si nécessaire
+│   └── css/custom.css     # Surcharge du style du thème afin d'y ajouter des éléments si nécessaire.
 ├── content/
-│   ├── en/posts/          # Articles du blog en Anglais
-│   └── fr/posts/          # Articles du blog en Français (langue principale)
+│   ├── en/posts/          # Articles du blog en Anglais.
+│   └── fr/posts/          # Articles du blog en Français (langue principale).
 ├── i18n/
-│   ├── en.toml            # Traductions des chaînes de caractères en Anglais
-│   └── fr.toml            # Traductions des chaînes de caractères en Français
-├── layouts/               # Surcharges ou gabarits HTML personnalisés pour le thème
-├── static/                # Fichiers statiques (images, favicons, robots.txt, etc.)
-├── .devcontainer.json     # Configuration de l'environnement GitHub Codespaces
-├── .gitignore             # Fichiers et dossiers ignorés par Git (public/, node_modules/)
-├── LICENSE                # Licence de distribution du projet
-├── README.md              # Documentation du projet
-├── env.sh                 # Script local de vérification de l'environnement de dev
-├── go.mod                 # Déclaration du module Go et version du thème (v1.0.9)
-├── go.sum                 # Empreintes de sécurité des modules Go
-└── hugo.toml              # Fichier de configuration principal du site Hugo
+│   ├── en.toml            # Traductions des chaînes de caractères en Anglais.
+│   └── fr.toml            # Traductions des chaînes de caractères en Français.
+├── layouts/               # Surcharges ou gabarits HTML personnalisés pour le thème.
+├── static/                # Fichiers statiques (images, favicons, robots.txt, ...).
+├── .devcontainer.json     # Configuration de l'environnement GitHub Codespaces.
+├── .gitignore             # Fichiers et dossiers ignorés par Git (public/, node_modules/).
+├── LICENSE                # Licence de distribution du projet.
+├── README.md              # Documentation du projet.
+├── env.sh                 # Script local de vérification de l'environnement de dev.
+├── go.mod                 # Déclaration du module Go et version du thème (v1.0.9).
+├── go.sum                 # Empreintes de sécurité des modules Go.
+└── hugo.toml              # Fichier de configuration principal du site Hugo.
 ```
 
 ## ⚖️ Licence:

@@ -1,0 +1,12 @@
+{
+	"files.exclude": {
+		".hugo_build.lock": true,
+		"resources": true,
+		"_vendor": true,
+		"public": true,
+		"node_modules": true,
+		"npm-debug.log": true,
+		".DS_Store": true,
+		"Thumbs.db": true
+	}
+}
