@@ -1,12 +1,23 @@
+# Hugo build lock file (generated during build process, safe to ignore)
 .hugo_build.lock
+
+# Hugo generated assets / cache (can be safely regenerated)
 resources/
+
+# Hugo modules / vendored dependencies
 _vendor/
 
+# Public build output (final generated site)
 public/
 
+# Node.js dependencies (auto-generated, very large, never commit)
 node_modules/
 
+# Application or tool logs (temporary debug files)
 *.log
 
+# macOS system metadata files (Finder metadata, safe to ignore)
 .DS_Store
+
+# Windows system thumbnail cache files
 Thumbs.db
