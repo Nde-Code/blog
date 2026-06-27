@@ -14,9 +14,9 @@ This guide explains how to completely delete commit history, reset the repositor
 
 This tutorial might seem unusual, but the need arises much more frequently than one might think. For example:
 
-* **If you expose secrets:** If sensitive data leaks into your source code, a deep cleanup is absolutely necessary, even if the keys have already been revoked.
-* **For cleanliness:** When working on the foundations of a project, it is often desirable to erase the initial trial-and-error phases to keep a clean repository.
-* **To start fresh after a long period:** Following major changes after a long period of inactivity, you might want to reset the history based on these new changes to avoid confusion.
+* **If you expose secrets:** if sensitive data leaks into your source code, a deep cleanup is absolutely necessary, even if the keys have already been revoked.
+* **For cleanliness:** when working on the foundations of a project, it is often desirable to erase the initial trial-and-error phases to keep a clean repository.
+* **To start fresh after a long period:** following major changes after a long period of inactivity, you might want to reset the history based on these new changes to avoid confusion.
 
 **⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the main branch on the remote repository. If others are collaborating on this project, they must delete their local version and re-clone the repository to avoid major conflicts.
 
@@ -72,7 +72,7 @@ git remote add origin https://github.com/<NAME>/<PROJECT_NAME>.git
 git push -u origin main --force
 ```
 
-**Note:** If your goal is to clean up **all** remote branches and tags alongside this push, you can delete other branches individually using the following command: `git push origin --delete <branch_name>`.
+**Note:** if your goal is to clean up **all** remote branches and tags alongside this push, you can delete other branches individually using the following command: `git push origin --delete <branch_name>`.
 
 ## 4. Conclusion:
 

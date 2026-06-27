@@ -14,9 +14,9 @@ Ce guide explique comment supprimer complètement l'historique des commits, réi
 
 Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent qu'on ne l'imagine, par exemple:
 
-* **Si vous exposez des secrets:** Dans votre code source, il est plus que nécessaire de faire un nettoyage en profondeur, même si les clés ont été révoquées.
-* **Pour une question de propreté:** Parfois, lorsque l'on travaille sur les bases d'un projet, on apprécie d'effacer les premiers balbutiements pour garder un dépôt propre.
-* **Pour repartir à zéro après une longue période:** Après de gros changements faisant suite à une longue période d'inactivité, on peut avoir envie de réinitialiser l'historique sur ces nouvelles bases pour ne pas se perdre.
+* **Si vous exposez des secrets:** dans votre code source, il est plus que nécessaire de faire un nettoyage en profondeur, même si les clés ont été révoquées.
+* **Pour une question de propreté:** parfois, lorsque l'on travaille sur les bases d'un projet, on apprécie d'effacer les premiers balbutiements pour garder un dépôt propre.
+* **Pour repartir à zéro après une longue période:** après de gros changements faisant suite à une longue période d'inactivité, on peut avoir envie de réinitialiser l'historique sur ces nouvelles bases pour ne pas se perdre.
 
 **⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche principale sur le dépôt distant. Si d'autres personnes collaborent sur ce projet, elles devront obligatoirement supprimer leur version locale et recloner le dépôt pour éviter des conflits majeurs.
 
