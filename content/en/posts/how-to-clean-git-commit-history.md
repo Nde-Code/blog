@@ -22,7 +22,7 @@ This may seem like an unusual tutorial, but it is much more common than one migh
 
 **Prerequisite:** make a backup of the repository whose commit history you intend to delete.
 
-> **Note:** this article assumes that the project's main branch is `main` and that this is the branch on which the cleanup will be performed. Since a few years ago (on GitHub), the default branch has typically been `main`, but this may vary. Check your repository as well as your remote platform settings (GitHub, GitLab, ...).
+> **Note:** this article assumes your main branch is named `main` and that this is the branch on which the cleanup will be performed. While this is the current standard on platforms like GitHub or GitLab, please check your repository. If your default branch has a different name, simply adjust the commands accordingly. I will point out the steps where this requires extra attention.
 
 # 1. Local cleanup:
 

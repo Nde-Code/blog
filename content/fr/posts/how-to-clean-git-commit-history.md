@@ -22,7 +22,7 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 **Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des *commits*.
 
-> **Note :** cet article part du principe que la branche principale du projet est `main` et que c'est sur celle-ci que l'on va effectuer le nettoyage. Normalement, depuis quelques années (sur GitHub), la branche par défaut est `main`, mais cela peut varier. Vérifiez votre dépôt ainsi que les paramètres de votre plateforme distante (GitHub, GitLab, ...).
+> **Note:** cet article part du principe que votre branche principale est `main` et que c'est sur celle-ci que l'on va effectuer le nettoyage. Bien que ce soit le standard actuel sur des plateformes comme GitHub ou GitLab, pensez à vérifier votre dépôt. Si votre branche par défaut porte un autre nom, il vous suffira d'adapter les commandes en conséquence. Je vous indiquerai les étapes où cette vigilance est nécessaire.
 
 # 1. Nettoyage local:
 
