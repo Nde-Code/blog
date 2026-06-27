@@ -26,9 +26,9 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 Avant même de commencer, cloner le dépôt dont le nettoyage doit être effectué.
 
-Ensuite, ouvrir un terminal à la racine du projet et exécuter les commandes suivantes:
+Ensuite, ouvrez un terminal à la racine du projet, puis suivez et exécutez les commandes suivantes:
 
-### Supprimer le dossier `.git`:
+### Pour supprimer le dossier `.git`:
 
 * **Windows (via PowerShell):**
 ```powershell
@@ -40,7 +40,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-### Réinitialiser le dépôt:
+### Pour réinitialiser le dépôt:
 
 ```bash
 # Initialiser un nouveau dépôt vide.

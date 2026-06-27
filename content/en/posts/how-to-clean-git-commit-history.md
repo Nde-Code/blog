@@ -28,7 +28,7 @@ To begin with, clone the repository onto your computer.
 
 Next, open a terminal at the root of the project and execute the following commands:
 
-### Delete the `.git` folder:
+### To delete the `.git` folder:
 
 * **Windows (PowerShell):**
 ```powershell
@@ -40,7 +40,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-### Reset the repository:
+### To reset the repository:
 
 ```bash
 # Initialize a new empty repository
