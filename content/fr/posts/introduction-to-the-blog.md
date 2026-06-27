@@ -58,6 +58,6 @@ Mon intention est de faire un projet participatif dans lequel chacun a la possib
 
 Je n'ai pas une orthographe extraordinaire et j'utilise donc souvent des outils (y compris l'IA, évidemment) pour me corriger. Il n'est donc pas impossible, de temps à autre, de croiser des fautes. Si c'est le cas, m'en faire part me fera extrêmement plaisir.
 
-J'utilise surtout: [https://www.scribens.fr/](https://www.scribens.fr/) et [https://www.reverso.net/orthographe/correcteur-francais/](https://www.reverso.net/orthographe/correcteur-francais/)
+J'utilise surtout [Scribens](https://www.scribens.fr/) et [Reverso](https://www.reverso.net/orthographe/correcteur-francais/) comme outils.
 
 > L'ouverture d'une *pull request* ou d'une *issue* sur le dépôt GitHub est de loin le moyen à privilégier.

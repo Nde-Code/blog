@@ -58,6 +58,6 @@ My intention is to make a participatory project in which everyone has the opport
 
 My spelling isn't extraordinary, so I often use tools (including AI, obviously) to proofread my writing. It is therefore not impossible to come across a few mistakes from time to time. If you spot any, letting me know would make me extremely happy.
 
-I use mainly: [https://www.scribens.fr/](https://www.scribens.fr/) and [https://www.reverso.net/orthographe/correcteur-anglais/](https://www.reverso.net/orthographe/correcteur-anglais/)
+I mostly use [Scribens](https://www.scribens.fr/) and [Reverso](https://www.reverso.net/orthographe/correcteur-francais/) as tools.
 
 > Opening a pull request or an issue on the GitHub repository is by far the preferred method.
