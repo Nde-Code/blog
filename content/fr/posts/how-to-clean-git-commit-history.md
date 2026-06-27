@@ -60,6 +60,8 @@ On s'assure que la branche par défaut est bien nommée `main`:
 git branch -M main
 ```
 
+**Note:** je pars du principe que vous êtes sur la branche principale du projet. Si vous êtes sur une autre branche ou que votre branche porte le nom de `master` (au lieu de `main` pour la branche principale), il est évident qu’il faut l’ajuster de façon adéquate.
+
 # 3. Lier au dépôt distant et forcer le *push*:
 
 > Remplacer l'URL ci-dessous par celle du dit dépôt GitHub.

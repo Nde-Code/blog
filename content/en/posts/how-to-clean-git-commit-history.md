@@ -60,6 +60,8 @@ Ensure that the default branch is correctly named `main`:
 git branch -M main
 ```
 
+**Note:** I assume you are on the main branch of the project. If you are on a different branch or if your branch is named `master` (instead of `main` for the main branch), it is obvious that you should adjust accordingly.
+
 # 3. Link to the remote repository and force push:
 
 > Replace the URL below with your actual GitHub repository URL.
