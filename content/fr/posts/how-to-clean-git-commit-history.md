@@ -30,7 +30,7 @@ Avant même de commencer, clonez le dépôt contenant la branche `main` à netto
 
 Ensuite, ouvrez un terminal à la racine du projet, puis suivez et exécutez les commandes suivantes:
 
-## Pour supprimer le dossier `.git`:
+## 1. Supprimer le dossier `.git`:
 
 * **Windows (via PowerShell):**
 ```powershell
@@ -44,7 +44,7 @@ rm -rf .git
 
 Cela supprime entièrement l'historique Git local, y compris les *commits*, les branches locales et la configuration du dépôt.
 
-## Pour réinitialiser le dépôt:
+## 2. Réinitialiser le dépôt:
 
 ```bash
 # Initialiser un nouveau dépôt vide:

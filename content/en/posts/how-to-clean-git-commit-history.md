@@ -30,7 +30,7 @@ Before anything else, clone the repository containing the `main` branch you want
 
 Then open a terminal at the root of the project and follow and execute the following commands:
 
-## To remove the `.git` folder:
+## 1. Remove the `.git` folder:
 
 * **Windows (via PowerShell):**
 ```powershell
@@ -44,7 +44,7 @@ rm -rf .git
 
 This completely removes the local Git history, including commits, local branches, and repository configuration.
 
-## To reinitialize the repository:
+## 2. Reinitialize the repository:
 
 ```bash
 # Initialize a new empty repository:
