@@ -5,7 +5,7 @@ draft: false
 tags: ["Git", "GitHub", "DevOps"]
 categories: ["Git"]
 author: "Nathan Debilloëz"
-description: "Cela peut paraître évident, mais c'est une manipulation que l'on doit parfois effectuer (bien plus souvent qu'on ne le pense). Face au peu d'articles traitant de ce sujet, j'ai décidé d'en rédiger un."
+description: "Cela peut surprendre, mais c'est une intervention qu'il faut parfois réaliser, souvent plus que ce que l'on suppose. Face au manque de contenu sur ce sujet, j'ai pris l'initiative d'en écrire un."
 ---
 
 # Introduction:
@@ -18,17 +18,19 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 * **Pour une question de propreté:** Parfois, lorsque l'on travaille sur les bases d'un projet, on apprécie d'effacer les premiers balbutiements pour garder un dépôt propre.
 * **Pour repartir à zéro après une longue période:** Après de gros changements faisant suite à une longue période d'inactivité, on peut avoir envie de réinitialiser l'historique sur ces nouvelles bases pour ne pas se perdre.
 
-> **⚠️ Attention :** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche principale sur le dépôt distant. Si d'autres personnes collaborent sur ce projet, elles devront obligatoirement supprimer leur version locale et recloner le dépôt pour éviter des conflits majeurs.
+**⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche principale sur le dépôt distant. Si d'autres personnes collaborent sur ce projet, elles devront obligatoirement supprimer leur version locale et recloner le dépôt pour éviter des conflits majeurs.
 
-> **Préalable :** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
+**Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
 
 ## 1. Nettoyage local:
 
-Ouvrir un terminal à la racine du projet et exécuter les commandes suivantes:
+Avant même de commencer, cloner le dépôt dont le nettoyage doit être effectué.
 
-### Supprimer l'ancien historique:
+Ensuite, ouvrir un terminal à la racine du projet et exécuter les commandes suivantes:
 
-* **Windows (PowerShell) :**
+### Supprimer le dossier `.git`:
+
+* **Windows (via PowerShell):**
 ```powershell
 Remove-Item -Recurse -Force .git
 ```
@@ -70,8 +72,8 @@ git remote add origin https://github.com/<NOM>/<NOM_PROJET>.git
 git push -u origin main --force
 ```
 
-> **Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: `git push origin --delete <nom_de_la_branche>`
+**Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: `git push origin --delete <nom_de_la_branche>`
 
 ## 4. Conclusion:
 
-Après cette opération, le dépôt sera complètement nettoyé (c'est un véritable *factory reset*), propre comme au premier jour.
+Une fois cette action effectuée, le dépôt sera remis à neuf, exempt de toute trace résiduelle.
