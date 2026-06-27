@@ -5,7 +5,7 @@ draft: false
 tags: ["Git", "GitHub", "DevOps"]
 categories: ["Git"]
 author: "Nathan Debilloëz"
-description: "This may come as a surprise, but this is an operation that sometimes needs to be performed, often more often than one might expect. Due to the lack of content on this topic, I decided to write one myself."
+description: "This may be surprising, but it is an intervention that must sometimes be carried out, often more than one assumes. Given the lack of content on this topic, I took the initiative to write a short tutorial on this subject."
 ---
 
 # Introduction:

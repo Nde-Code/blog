@@ -1,16 +1,16 @@
 ---
-title: "Réinitialiser l'historique Git de la branche principale (main) d'un projet."
+title: "Réinitialiser l'historique Git de la branche principale d'un projet."
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
 categories: ["Git"]
 author: "Nathan Debilloëz"
-description: "Cela peut surprendre, mais c'est une intervention qu'il faut parfois réaliser, souvent plus que ce que l'on suppose. Face au manque de contenu sur ce sujet, j'ai pris l'initiative d'en écrire un."
+description: "Cela peut surprendre, mais c'est une intervention qu'il faut parfois réaliser, souvent plus que ce que l'on suppose. Face au manque de contenu sur ce sujet, j'ai pris l'initiative de rédiger un petit didacticiel à ce sujet."
 ---
 
 # Introduction:
 
-Ce guide explique comment supprimer complètement l'historique des commits de la branche principale (`main`), réinitialiser le dépôt local en recréant un historique propre pour la branche `main` et forcer la mise à jour sur le dépôt distant.
+Ce guide explique comment supprimer complètement l'historique des *commits* de la branche principale (`main`), réinitialiser le dépôt local en recréant un historique propre pour la branche `main` et forcer la mise à jour sur le dépôt distant.
 
 Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent qu'on ne l'imagine, par exemple:
 
@@ -20,7 +20,7 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 **⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche principale sur le dépôt distant. Si d'autres personnes collaborent sur ce projet, elles devront obligatoirement supprimer leur version locale et recloner le dépôt pour éviter des conflits majeurs.
 
-**Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
+**Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des *commits*.
 
 > **Note :** cet article part du principe que la branche principale du projet est `main` et que c'est sur celle-ci que l'on va effectuer le nettoyage. Normalement, depuis quelques années (sur GitHub), la branche par défaut est `main`, mais cela peut varier. Vérifiez votre dépôt ainsi que les paramètres de votre plateforme distante (GitHub, GitLab, ...).
 
@@ -42,7 +42,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-Cela supprime entièrement l'historique Git local, y compris les commits, les branches locales et la configuration du dépôt.
+Cela supprime entièrement l'historique Git local, y compris les *commits*, les branches locales et la configuration du dépôt.
 
 ## Pour réinitialiser le dépôt:
 
@@ -80,7 +80,7 @@ git push -u origin main --force
 
 **Attention:** ici aussi, on *push* sur `main`, donc sur la branche principale comme expliqué précédemment. Il est indispensable de vérifier et de renseigner le nom adéquat tel qu'il est défini dans votre configuration.
 
-**Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: `git push origin --delete <nom_de_la_branche>`. Cette opération doit être répétée pour chaque branche concernée.
+**Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le *push*, vous pouvez ajouter cette commande juste avant ou après votre *push*: `git push origin --delete <nom_de_la_branche>`. Cette opération doit être répétée pour chaque branche concernée.
 
 # Conclusion:
 
