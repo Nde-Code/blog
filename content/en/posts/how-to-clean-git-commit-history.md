@@ -22,13 +22,13 @@ This tutorial might seem unusual, but the need arises much more frequently than 
 
 **Prerequisite:** back up the repository whose commit history you wish to delete before proceeding.
 
-## 1. Local cleanup:
+# 1. Local cleanup:
 
 To begin with, clone the repository onto your computer.
 
 Next, open a terminal at the root of the project and execute the following commands:
 
-### To delete the `.git` folder:
+## To delete the `.git` folder:
 
 * **Windows (PowerShell):**
 ```powershell
@@ -40,7 +40,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-### To reset the repository:
+## To reset the repository:
 
 ```bash
 # Initialize a new empty repository
@@ -53,14 +53,14 @@ git add .
 git commit -m "chore: reset repository history and initialize fresh project state"
 ```
 
-## 2. Configure the `main` branch:
+# 2. Configure the `main` branch:
 
 Ensure that the default branch is correctly named `main`:
 ```bash
 git branch -M main
 ```
 
-## 3. Link to the remote repository and force push:
+# 3. Link to the remote repository and force push:
 
 > Replace the URL below with your actual GitHub repository URL.
 
@@ -74,6 +74,6 @@ git push -u origin main --force
 
 **Note:** if your goal is to clean up **all** remote branches and tags alongside this push, you can delete other branches individually using the following command: `git push origin --delete <branch_name>`.
 
-## 4. Conclusion:
+# Conclusion:
 
 After this operation, the repository will be completely cleaned up and fresh as day one.

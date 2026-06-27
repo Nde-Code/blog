@@ -22,13 +22,13 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 **Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
 
-## 1. Nettoyage local:
+# 1. Nettoyage local:
 
 Avant même de commencer, cloner le dépôt dont le nettoyage doit être effectué.
 
 Ensuite, ouvrez un terminal à la racine du projet, puis suivez et exécutez les commandes suivantes:
 
-### Pour supprimer le dossier `.git`:
+## Pour supprimer le dossier `.git`:
 
 * **Windows (via PowerShell):**
 ```powershell
@@ -40,7 +40,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-### Pour réinitialiser le dépôt:
+## Pour réinitialiser le dépôt:
 
 ```bash
 # Initialiser un nouveau dépôt vide.
@@ -53,14 +53,14 @@ git add .
 git commit -m "chore: reset repository history and initialize fresh project state."  
 ```
 
-## 2. Configurer la branche principale:
+# 2. Configurer la branche principale:
 
 On s'assure que la branche par défaut est bien nommée `main`:
 ```bash
 git branch -M main
 ```
 
-## 3. Lier au dépôt distant et forcer le *push*:
+# 3. Lier au dépôt distant et forcer le *push*:
 
 > Remplacer l'URL ci-dessous par celle du dit dépôt GitHub.
 
@@ -74,6 +74,6 @@ git push -u origin main --force
 
 **Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: `git push origin --delete <nom_de_la_branche>`
 
-## 4. Conclusion:
+# Conclusion:
 
 Une fois cette action effectuée, le dépôt sera remis à neuf, exempt de toute trace résiduelle.
