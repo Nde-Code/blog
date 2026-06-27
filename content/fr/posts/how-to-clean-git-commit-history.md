@@ -1,5 +1,5 @@
 ---
-title: "Réinitialiser l'historique Git de la branche principale d'un projet."
+title: "Réinitialiser l'historique Git de la branche principale d'un projet"
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]

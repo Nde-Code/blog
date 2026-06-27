@@ -1,5 +1,5 @@
 ---
-title: "Introduction and explanation of this new section of the website."
+title: "Introduction and explanation of this new section of the website"
 date: 2026-06-21
 draft: false
 tags: ["introduction", "hugo", "GitHub", "GitHub Pages"]

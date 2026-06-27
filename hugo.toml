@@ -62,8 +62,8 @@ defaultContentLanguageInSubdir = false
       url = "https://github.com/Nde-Code/blog"
       weight = 4
     [[languages.fr.menus.main]]
-      name = "Articles"
-      url = "posts/"
+      name = "Contact"
+      url = "mailto:nathan.debilloez@outlook.com"
       weight = 2
     [[languages.fr.menus.main]]
       name = "Status"
@@ -82,8 +82,8 @@ defaultContentLanguageInSubdir = false
       url = "https://github.com/Nde-Code/blog"
       weight = 4
     [[languages.en.menus.main]]
-      name = "Posts"
-      url = "posts/"
+      name = "Contact"
+      url = "mailto:nathan.debilloez@outlook.com"
       weight = 2
     [[languages.en.menus.main]]
       name = "Status"
