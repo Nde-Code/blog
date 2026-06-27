@@ -59,12 +59,12 @@ git commit -m "chore: reset repository history and initialize fresh project stat
 
 # 2. Configurer la branche principale:
 
-On s'assure que la branche par défaut est bien nommée `main`:
+On renomme la branche principale du dépôt en `main`:
 ```bash
 git branch -M main
 ```
 
-**Note:** dans cette commande, je pars du principe que la branche principale du projet est `main`. Adaptez ce nom à votre cas si votre dépôt utilise un autre nom de branche principale.
+**Note:** cette commande renomme la branche courante en `main`. Si votre dépôt utilise un autre nom pour sa branche principale, adaptez la commande en conséquence.
 
 # 3. Lier au dépôt distant et forcer le *push*:
 

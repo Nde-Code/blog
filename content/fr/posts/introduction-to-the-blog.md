@@ -10,7 +10,7 @@ description: "Il y a longtemps déjà que je voulais ajouter une rubrique d'arti
 
 # Préambule:
 
-Cela fait déjà très longtemps que je voulais créer une section "articles" sur mon site. Sûrement pas pour parler bêtement de certains sujets ou donner mon avis sur diverses choses, mais beaucoup plus pour expliquer, guider ou partager mon expérience avec certains outils numériques ou technologiques. Ce site porte le "nom" de blog, mais ce que je vais faire ici n’est pas vraiment un blog, et de loin !
+Cela fait déjà très longtemps que je voulais créer une section "articles" sur mon site. Sûrement pas pour parler bêtement de certains sujets ou donner mon avis sur diverses choses, mais beaucoup plus pour expliquer, guider ou partager mon expérience avec certains outils numériques ou technologiques. Ce site porte le "nom" de blog, mais ce que je vais faire ici n'est pas vraiment un blog, et de loin !
 
 À vrai dire, pendant longtemps, après avoir galéré à configurer, brancher ou programmer certains trucs, je rédigeais de petits guides Markdown que je laissais dépérir dans mes Gists GitHub, ce qui est franchement ridicule et ne profite pas à grand monde.
 

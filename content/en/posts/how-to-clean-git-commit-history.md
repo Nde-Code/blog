@@ -59,13 +59,12 @@ git commit -m "chore: reset repository history and initialize fresh project stat
 
 # 2. Configure the main branch:
 
-Make sure the default branch is named `main`:
-
+We rename the repository's main branch to `main`:
 ```bash
 git branch -M main
 ```
 
-**Note:** in this command, I assume that the project's main branch is `main`. Adjust this name if your repository uses a different main branch name.
+**Note:** this command renames the current branch to `main`. If your repository uses a different name for its main branch, adjust the command accordingly.
 
 # 3. Link the remote repository and force push:
 
