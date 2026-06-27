@@ -22,7 +22,7 @@ This tutorial might seem unusual, but the need arises much more frequently than 
 
 **Prerequisite:** back up the repository whose commit history you wish to delete before proceeding.
 
-> **Note:** this article assumes that the project's main branch is `main` (or `master` for older repositories).
+> **Note:** this article assumes that the project's main branch is `main`.
 
 # 1. Local cleanup:
 
@@ -77,6 +77,8 @@ git remote add origin https://github.com/<NAME>/<PROJECT_NAME>.git
 # Overwrite the remote history with the new local commit
 git push -u origin main --force
 ```
+
+**Warning:** here as well, we *push* to `main`, i.e., the main branch as explained previously. It is essential to verify and set the correct name as defined in your configuration.
 
 **Note:** if your goal is to clean up **all** remote branches and tags alongside this push, you can delete other branches individually using the following command: `git push origin --delete <branch_name>`.
 

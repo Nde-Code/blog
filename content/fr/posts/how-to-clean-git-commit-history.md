@@ -22,7 +22,7 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 **Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
 
-> **Note:** cet article part du principe que la branche principale du projet est `main` (ou `master` pour les dépôts plus anciens). 
+> **Note:** cet article part du principe que la branche principale du projet est `main`.
 
 # 1. Nettoyage local:
 
@@ -77,6 +77,8 @@ git remote add origin https://github.com/<NOM>/<NOM_PROJET>.git
 # Écraser l'historique distant avec le nouveau commit local
 git push -u origin main --force
 ```
+
+**Attention:** ici aussi, on *push* sur `main`, donc sur la branche principale comme expliqué précédemment. Il est indispensable de vérifier et de renseigner le nom adéquat tel qu'il est défini dans votre configuration.
 
 **Note:** si le but est vraiment de nettoyer **toutes** les branches et tags distants en même temps que le push, vous pouvez ajouter cette commande juste avant ou après votre push: `git push origin --delete <nom_de_la_branche>`
 
