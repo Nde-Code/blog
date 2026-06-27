@@ -52,8 +52,12 @@ As usual, I release all my personal digital work as open-source.
 
 Although it might not be super interesting, unless you want to check out my configuration and my few modifications, I have, as always, put all the code for this "blog" on my GitHub, which you can check out here: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog)
 
+My intention is to make a participatory project in which everyone has the opportunity to intervene, to propose changes, ...
+
 # Postscript
 
 My spelling isn't extraordinary, so I often use tools (including AI, obviously) to proofread my writing. It is therefore not impossible to come across a few mistakes from time to time. If you spot any, letting me know would make me extremely happy.
+
+I use mainly: [https://www.scribens.fr/](https://www.scribens.fr/) and [https://www.reverso.net/orthographe/correcteur-anglais/](https://www.reverso.net/orthographe/correcteur-anglais/)
 
 > Opening a pull request or an issue on the GitHub repository is by far the preferred method.

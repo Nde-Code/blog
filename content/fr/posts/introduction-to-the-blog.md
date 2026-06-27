@@ -2,7 +2,7 @@
 title: "Introduction et explication sur cette nouvelle partie du site."
 date: 2026-06-21
 draft: false
-tags: ["first", "introduction", "hugo", "GitHub", "GitHub Pages"]
+tags: ["introduction", "hugo", "GitHub", "GitHub Pages"]
 categories: ["Générale"]
 author: "Nathan Debilloëz"
 description: "Il y a longtemps déjà que je voulais ajouter une rubrique d'articles (blog) sur mon site web principal. Ce dernier n'étant pas vraiment adapté à ce cas d'utilisation, j'ai décidé de créer un site web à part et indépendant pour gérer cette partie."
@@ -10,15 +10,15 @@ description: "Il y a longtemps déjà que je voulais ajouter une rubrique d'arti
 
 # Préambule:
 
-Cela fait déjà très longtemps que je voulais créer une section "articles" sur mon site. Sûrement pas pour parler bêtement de certains sujets ou donner mon avis sur diverses choses, mais beaucoup plus pour expliquer, guider ou partager mon expérience avec certains outils numériques ou technologiques. Ce site porte le "nom" de blog, mais ce n'est pas vraiment un blog ce que je vais faire ici, et de loin !
+Cela fait déjà très longtemps que je voulais créer une section "articles" sur mon site. Sûrement pas pour parler bêtement de certains sujets ou donner mon avis sur diverses choses, mais beaucoup plus pour expliquer, guider ou partager mon expérience avec certains outils numériques ou technologiques. Ce site porte le "nom" de blog, mais ce que je vais faire ici n’est pas vraiment un blog, et de loin !
 
-À vrai dire, pendant longtemps, après avoir galéré à configurer, brancher ou programmer certains trucs, je rédigeais de petits guides Markdown que je laissais dépérir dans mes Gists GitHub, ce qui est franchement ridicule et ne bénéficie pas à grand monde.
+À vrai dire, pendant longtemps, après avoir galéré à configurer, brancher ou programmer certains trucs, je rédigeais de petits guides Markdown que je laissais dépérir dans mes Gists GitHub, ce qui est franchement ridicule et ne profite pas à grand monde.
 
-Bien que généralement ce que je fais soit très dirigé informatique "pur jus", je n'ai vraiment pas envie de me limiter à cela et j'envisage d'élargir un peu à la technologie en général.
+J'aimerais diversifier mes activités, allant au-delà de mon expertise informatique "stricto sensu" pour explorer la technologie dans son ensemble.
 
 # Mise en oeuvre du projet "blog":
 
-J'ai décidé de ne pas changer mes bonnes habitudes: faire avec les moyens du bord pour que cela reste simple et intuitif à utiliser, mais surtout pour que l'hébergement ne me coûte pas un rond ! Payer un serveur est pour moi totalement absurde (et très onéreux), surtout s'il s'agit simplement de faire tourner du WordPress pour quelques guides de temps à autre. Qui plus est, j'ai une sainte horreur de la publicité ; il n'est donc absolument pas question d'en coller sur mes projets pour les financer. Tout ce que je crée est fait sur mon temps libre, par pur plaisir et par passion.
+J'ai décidé de ne pas changer mes bonnes habitudes: faire avec les moyens du bord pour que cela reste simple et intuitif à utiliser, mais surtout pour que l'hébergement ne me coûte pas un rond ! Payer un serveur est pour moi totalement absurde (et très onéreux), surtout s'il s'agit simplement de faire tourner du WordPress pour quelques guides de temps à autre. Qui plus est, j'ai une sainte horreur de la publicité; il n'est donc absolument pas question d'en coller sur mes projets pour les financer. Tout ce que je crée est fait sur mon temps libre, par pur plaisir et par passion.
 
 C'est pourquoi j'ai choisi d'utiliser un site web classique, dit "statique", à l'image de mon site principal, afin de pouvoir héberger ce projet simplement et gratuitement.
 
@@ -36,7 +36,7 @@ J'ai choisi Hugo pour plusieurs raisons:
 
 Je ferai sans doute un (ou des) article(s) sur [Hugo](https://gohugo.io/) prochainement, parce que c'est vraiment un outil super.
 
-# Le thème que j'ai choisi et pourquoi
+# Le thème que j'ai choisi et pourquoi:
 
 Le thème que j'utilise n'a pas été conçu par mes soins, mais est très généreusement mis à disposition par **Atsushi Nagase**. Vous pouvez le retrouver ici: [hugo-primer-blog](https://themes.gohugo.io/themes/hugo-primer-blog/). Je me suis simplement permis d'ajuster quelques détails afin de l'adapter parfaitement à mes besoins.
 
@@ -50,10 +50,14 @@ Il n'y a pas vraiment d'autre explication à donner: le thème me plaisait tel q
 
 Comme d'habitude, je mets tout mon travail numérique personnel en open-source.
 
-Bien que ce ne soit pas super intéressant, si ce n'est pour voir ma configuration et mes quelques modifications, j'ai comme d'habitude mis tout le code de ce "blog" sur mon GitHub, que vous pouvez aller consulter ici: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog)
+Bien que ce ne soit pas super intéressant, si ce n'est pour voir ma configuration et mes quelques modifications, j'ai, comme d'habitude, mis tout le code de ce projet sur mon GitHub, que vous pouvez aller consulter ici: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog)
+
+Mon intention est de faire un projet participatif dans lequel chacun a la possibilité d'intervenir, de proposer des modifications, ...
 
 # Post-scriptum:
 
-Je n'ai pas une orthographe extraordinaire et j'utilisation donc souvent des outils (y compris l'IA, évidemment) pour me corriger. Il n'est donc pas impossible, de temps à autre, de croiser des fautes. Si c'est le cas, m'en faire part me fera extrêmement plaisir.
+Je n'ai pas une orthographe extraordinaire et j'utilise donc souvent des outils (y compris l'IA, évidemment) pour me corriger. Il n'est donc pas impossible, de temps à autre, de croiser des fautes. Si c'est le cas, m'en faire part me fera extrêmement plaisir.
+
+J'utilise surtout: [https://www.scribens.fr/](https://www.scribens.fr/) et [https://www.reverso.net/orthographe/correcteur-francais/](https://www.reverso.net/orthographe/correcteur-francais/)
 
 > L'ouverture d'une *pull request* ou d'une *issue* sur le dépôt GitHub est de loin le moyen à privilégier.
