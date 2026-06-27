@@ -22,6 +22,8 @@ This tutorial might seem unusual, but the need arises much more frequently than 
 
 **Prerequisite:** back up the repository whose commit history you wish to delete before proceeding.
 
+> **Note:** this article assumes that the project's main branch is `main` (or `master` for older repositories).
+
 # 1. Local cleanup:
 
 To begin with, clone the repository onto your computer.
@@ -60,7 +62,9 @@ Ensure that the default branch is correctly named `main`:
 git branch -M main
 ```
 
-**Note:** I assume you are on the main branch of the project. If you are on a different branch or if your branch is named `master` (instead of `main` for the main branch), it is obvious that you should adjust accordingly.
+**Note:** in this example, I assume that the project's default branch is `main`. Adjust the branch name if your repository uses a different default branch.
+
+> By default, GitHub has used `main` as the default branch name for several years, but this may vary. Check your repository and the settings of your remote hosting platform (GitHub, GitLab, etc.) to confirm the correct branch name.
 
 # 3. Link to the remote repository and force push:
 

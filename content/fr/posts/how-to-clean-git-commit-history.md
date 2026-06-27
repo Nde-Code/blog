@@ -22,6 +22,8 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 **Préalable:** effectuez une sauvegarde du dépôt dont vous souhaitez supprimer l'historique des commits.
 
+> **Note:** cet article part du principe que la branche principale du projet est `main` (ou `master` pour les dépôts plus anciens). 
+
 # 1. Nettoyage local:
 
 Avant même de commencer, cloner le dépôt dont le nettoyage doit être effectué.
@@ -60,7 +62,9 @@ On s'assure que la branche par défaut est bien nommée `main`:
 git branch -M main
 ```
 
-**Note:** je pars du principe que vous êtes sur la branche principale du projet. Si vous êtes sur une autre branche ou que votre branche porte le nom de `master` (au lieu de `main` pour la branche principale), il est évident qu’il faut l’ajuster de façon adéquate.
+**Note:** dans cet exemple, je pars du principe que la branche principale du projet est `main`. Adaptez ce nom à votre cas si votre dépôt utilise une autre branche principale.
+
+> Normalement, depuis quelques années (sur GitHub), la branche par défaut est `main`, mais cela peut changer. Vérifiez votre dépôt ainsi que les paramètres de votre plateforme distante (GitHub, GitLab, ...).
 
 # 3. Lier au dépôt distant et forcer le *push*:
 
