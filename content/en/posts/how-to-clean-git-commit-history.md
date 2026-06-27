@@ -47,13 +47,13 @@ This completely removes the local Git history, including commits, local branches
 ## To reinitialize the repository:
 
 ```bash
-# Initialize a new empty repository.
+# Initialize a new empty repository:
 git init
 
-# Add all current files.
+# Add all current files:
 git add .
 
-# Create the new first commit.
+# Create the new first commit:
 git commit -m "chore: reset repository history and initialize fresh project state."
 ```
 
@@ -72,10 +72,10 @@ git branch -M main
 > Replace the URL below with your actual GitHub repository URL.
 
 ```bash
-# Add the remote repository URL
+# Add the remote repository URL:
 git remote add origin https://github.com/<NOM>/<NOM_PROJET>.git
 
-# Overwrite the remote history with the new local commit
+# Overwrite the remote history with the new local commit:
 git push -u origin main --force
 ```
 

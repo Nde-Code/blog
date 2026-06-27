@@ -47,13 +47,13 @@ Cela supprime entièrement l'historique Git local, y compris les *commits*, les 
 ## Pour réinitialiser le dépôt:
 
 ```bash
-# Initialiser un nouveau dépôt vide.
+# Initialiser un nouveau dépôt vide:
 git init
 
-# Ajouter tous les fichiers actuels.
+# Ajouter tous les fichiers actuels:
 git add .
 
-# Créer le nouveau premier commit.
+# Créer le nouveau premier commit:
 git commit -m "chore: reset repository history and initialize fresh project state."  
 ```
 
@@ -71,10 +71,10 @@ git branch -M main
 > Remplacer l'URL ci-dessous par celle du dit dépôt GitHub.
 
 ```bash
-# Ajouter l'adresse de votre dépôt distant
+# Ajouter l'adresse de votre dépôt distant:
 git remote add origin https://github.com/<NOM>/<NOM_PROJET>.git
 
-# Écraser l'historique distant avec le nouveau commit local
+# Écraser l'historique distant avec le nouveau commit local:
 git push -u origin main --force
 ```
 
