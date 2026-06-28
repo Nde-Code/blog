@@ -10,7 +10,7 @@ themeDark = "Thème sombre"
 themeAuto = "Thème du système"
 
 # Content:
-latestPosts = "Derniers articles"
+latestPosts = "Articles:"
 recentPosts = "Articles récents"
 relatedPosts = "Articles similaires"
 noPosts = "Aucun article trouvé."
