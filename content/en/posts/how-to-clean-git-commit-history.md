@@ -28,7 +28,7 @@ This may seem like an unusual tutorial, but it is much more common than you migh
 
 Before anything else, clone the repository containing the `main` branch you want to reset.
 
-Then open a terminal at the root of the project and run the following commands:
+Next, open a terminal at the root of your project, then follow the steps below and run the associated commands:
 
 ## Step 1, remove the `.git` folder:
 

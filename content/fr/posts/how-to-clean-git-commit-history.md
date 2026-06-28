@@ -28,7 +28,7 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 Avant même de commencer, clonez le dépôt contenant la branche `main` à nettoyer.
 
-Ensuite, ouvrez un terminal à la racine du projet, puis suivez et exécutez les commandes suivantes:
+Ensuite, ouvrez un terminal à la racine du projet, puis suivez les étapes ci-dessous et exécutez les commandes associées: 
 
 ## Étape 1, supprimer le dossier `.git`:
 
