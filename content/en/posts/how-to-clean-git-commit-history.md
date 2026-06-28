@@ -10,7 +10,7 @@ description: "While it may seem surprising, this is an operation that needs to b
 
 # Introduction:
 
-This guide explains how to completely remove the commit history of the main branch (`main`), reset the local repository by recreating a clean history for the `main` branch, and force the update to the remote repository.
+This guide explains how to reset the commit history of the main branch locally, before force-updating the remote repository to start fresh.
 
 This may seem like an unusual tutorial, but it is much more common than you might think, for example:
 

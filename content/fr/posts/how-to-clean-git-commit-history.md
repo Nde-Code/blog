@@ -10,7 +10,7 @@ description: "Cela peut surprendre, mais c'est une opération qu'il faut parfois
 
 # Introduction:
 
-Ce guide explique comment supprimer complètement l'historique des *commits* de la branche principale (`main`), réinitialiser le dépôt local en recréant un historique propre pour la branche `main`, puis forcer la mise à jour sur le dépôt distant.
+Ce guide explique comment réinitialiser l'historique des *commits* de la branche principale en local, avant de forcer la mise à jour sur le dépôt distant pour repartir sur des bases propres.
 
 Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent qu'on ne l'imagine, par exemple:
 
