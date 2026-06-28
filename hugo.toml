@@ -58,10 +58,6 @@ defaultContentLanguageInSubdir = false
     title = "Nathan Debilloëz - Blog"
     
     [[languages.fr.menus.main]]
-      name = "Code source"
-      url = "https://github.com/Nde-Code/blog"
-      weight = 4
-    [[languages.fr.menus.main]]
       name = "Contact"
       url = "mailto:nathan.debilloez@outlook.com"
       weight = 2
@@ -69,6 +65,10 @@ defaultContentLanguageInSubdir = false
       name = "Status"
       url = "https://nde-status.instatus.com/"
       weight = 3
+    [[languages.fr.menus.main]]
+      name = "Code source"
+      url = "https://github.com/Nde-Code/blog"
+      weight = 4
 
   # configuration (en)
   [languages.en]
@@ -78,10 +78,6 @@ defaultContentLanguageInSubdir = false
     title = "Nathan Debilloëz - Blog"
     
     [[languages.en.menus.main]]
-      name = "Source code"
-      url = "https://github.com/Nde-Code/blog"
-      weight = 4
-    [[languages.en.menus.main]]
       name = "Contact"
       url = "mailto:nathan.debilloez@outlook.com"
       weight = 2
@@ -89,3 +85,7 @@ defaultContentLanguageInSubdir = false
       name = "Status"
       url = "https://nde-status.instatus.com/"
       weight = 3
+    [[languages.en.menus.main]]
+      name = "Source code"
+      url = "https://github.com/Nde-Code/blog"
+      weight = 4
