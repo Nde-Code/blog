@@ -1,0 +1,69 @@
+{{- define "main" -}}
+<div class="Subhead mb-4">
+    <h1 class="Subhead-heading">{{ .Title }}</h1>
+    {{- with .Description -}}
+    <div class="Subhead-description">{{ . }}</div>
+    {{- end -}}
+</div>
+{{- with .Content -}}
+<div class="markdown-body mb-4">
+    {{ . }}
+</div>
+{{- end -}}
+<div class="Box">
+    {{- $paginator := .Paginate .Pages -}}
+    {{- range $paginator.Pages -}}
+    {{- $post := . -}}
+    <div class="Box-row">
+        <article class="d-flex flex-column flex-md-row">
+            {{- with .Params.image -}}
+            <div class="mr-md-3 mb-2 mb-md-0" style="flex-shrink: 0;">
+                <a href="{{ $post.RelPermalink }}">
+                    {{- partial "featured-image.html" (dict "page" $post "class" "rounded-2" "style" "width: 200px; height: 120px; object-fit: cover;") -}}
+                </a>
+            </div>
+            {{- end -}}
+            <div class="flex-auto">
+                <h2 class="f3 lh-condensed mb-1">
+                    <a href="{{ .RelPermalink }}" class="Link--primary">{{ .Title }}</a>
+                </h2>
+                {{- $hasDate := not .Date.IsZero -}}
+                {{- $hasReadingTime := and site.Params.showReadingTime (ne .Params.hideReadingTime true) -}}
+                {{- if or $hasDate $hasReadingTime -}}
+                <div class="d-flex flex-items-center color-fg-muted f6 mb-2">
+                    {{- if $hasDate -}}
+                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .Date.Format (site.Params.dateFormat | default "2006-01-02") }}
+                    </time>
+                    {{- end -}}
+                    {{- if $hasReadingTime -}}
+                    {{- if $hasDate -}}
+                    <span class="mx-2">&middot;</span>{{- end -}}
+                    <span>{{ .ReadingTime }} {{ i18n "minRead" | default "min read" }}</span>
+                    {{- end -}}
+                </div>
+                {{- end -}}
+                {{- with .Description | default .Summary -}}
+                <p class="color-fg-muted mb-2">{{ . | plainify | truncate 200 }}</p>
+                {{- end -}}
+                {{- with .Params.tags -}}
+                <div class="d-flex flex-wrap">
+                    {{- range . -}}
+                    {{- $tagName := . -}}
+                    {{- with site.GetPage (printf "tags/%s" ($tagName | urlize)) -}}
+                    <a href="{{ .RelPermalink }}" class="Label Label--secondary mr-1 mb-1">{{ $tagName }}</a>
+                    {{- end -}}
+                    {{- end -}}
+                </div>
+                {{- end -}}
+            </div>
+        </article>
+    </div>
+    {{- else -}}
+    <div class="Box-row">
+        <p class="color-fg-muted">{{ i18n "noPosts" | default "No posts found." }}</p>
+    </div>
+    {{- end -}}
+</div>
+{{- partial "pagination.html" $paginator -}}
+{{- end -}}
