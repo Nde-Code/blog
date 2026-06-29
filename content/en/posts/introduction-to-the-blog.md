@@ -2,7 +2,7 @@
 title: "Introduction and explanation of this new section of the website"
 date: 2026-06-21
 draft: false
-tags: ["introduction", "hugo", "GitHub", "GitHub Pages"]
+tags: ["Hugo", "GitHub", "GitHub Pages"]
 categories: ["General"]
 author: "Nathan Debilloez"
 description: "It's been a long time since I wanted to add an 'Articles' section (or, more generally, a blog) to my main website. Since this one is not really suitable for this purpose, I decided to create a separate and independent website entirely dedicated to this part.
