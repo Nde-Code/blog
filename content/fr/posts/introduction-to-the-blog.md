@@ -5,7 +5,7 @@ draft: false
 tags: ["Hugo", "GitHub", "GitHub Pages"]
 categories: ["Générale"]
 author: "Nathan Debilloëz"
-description: "Il y a déjà longtemps que je souhaitais ajouter une rubrique 'Articles' (ou, plus généralement, un blog) à mon site web principal. Celui-ci n'étant pas vraiment adapté à cet usage, j'ai décidé de créer un site web distinct et indépendant, entièrement dédié à cette partie."
+description: "Il y a déjà longtemps que je souhaitais ajouter une rubrique dédiée à des articles sur mon site web principal. Celui-ci n'étant pas vraiment adapté à cet usage, j'ai décidé de créer un site web distinct et indépendant, entièrement consacré à cette partie."
 ---
 
 # Préambule:

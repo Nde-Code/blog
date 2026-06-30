@@ -5,8 +5,7 @@ draft: false
 tags: ["Hugo", "GitHub", "GitHub Pages"]
 categories: ["General"]
 author: "Nathan Debilloez"
-description: "It's been a long time since I wanted to add an 'Articles' section (or, more generally, a blog) to my main website. Since this one is not really suitable for this purpose, I decided to create a separate and independent website entirely dedicated to this part.
-"
+description: "I had long wanted to add a section dedicated to articles on my main website. Since it wasn't really suited for that purpose, I decided to create a separate and independent website entirely devoted to this part."
 ---
 
 # Preamble
