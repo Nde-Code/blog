@@ -121,7 +121,7 @@ Les dossiers et les fichiers du projet sont organisés comme suit:
 
 Ce projet est distribué sous la licence **[GNU General Public License v3.0](https://github.com/Nde-Code/blog?tab=GPL-3.0-1-ov-file)**.
 
-## 🎯 À propos:
+## 🎯 Auteur:
 
 Ce projet est réalisé et maintenu par [Nde-Code](https://nde-code.github.io/).
 
