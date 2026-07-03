@@ -10,19 +10,19 @@ description: "Il y a déjà longtemps que je souhaitais ajouter une rubrique dé
 
 # Préambule:
 
-Cela fait déjà très longtemps que je voulais créer une section "articles" sur mon site. Sûrement pas pour parler bêtement de certains sujets ou donner mon avis sur diverses choses, mais beaucoup plus pour expliquer, guider ou partager mon expérience avec certains outils numériques ou technologiques. Ce site porte le "nom" de blog, mais ce que je vais faire ici n'est pas vraiment un blog, et de loin !
+Cela fait déjà très longtemps que je voulais créer une section articles sur mon site. Sûrement pas pour parler bêtement de certains sujets ou donner mon avis sur diverses choses, mais beaucoup plus pour expliquer, guider ou partager mon expérience avec certains outils numériques ou technologiques. Ce site porte le "nom" de blog, mais ce que je vais faire ici n'est pas vraiment un blog, et de loin !
 
 À vrai dire, pendant longtemps, après avoir galéré à configurer, brancher ou programmer certains trucs, je rédigeais de petits guides Markdown que je laissais dépérir dans mes Gists GitHub, ce qui est franchement ridicule et ne profite pas à grand monde.
 
 J'aimerais diversifier mes activités, allant au-delà de mon expertise informatique "stricto sensu" pour explorer la technologie dans son ensemble.
 
-# Mise en oeuvre du projet "blog":
+# Mise en oeuvre du projet blog:
 
 J'ai décidé de ne pas changer mes bonnes habitudes: faire avec les moyens du bord pour que cela reste simple et intuitif à utiliser, mais surtout pour que l'hébergement ne me coûte pas un rond ! Payer un serveur est pour moi totalement absurde (et très onéreux), surtout s'il s'agit simplement de faire tourner du WordPress pour quelques guides de temps à autre. Qui plus est, j'ai une sainte horreur de la publicité; il n'est donc absolument pas question d'en coller sur mes projets pour les financer. Tout ce que je crée est fait sur mon temps libre, par pur plaisir et par passion.
 
 C'est pourquoi j'ai choisi d'utiliser un site web classique, dit "statique", à l'image de mon site principal, afin de pouvoir héberger ce projet simplement et gratuitement.
 
-Cependant, étant donné la complexité de développement d'un site statique de A à Z, concevoir un espace plus élaboré comme un "blog" s'avère vite incongru et bien trop long à maintenir sans outils adaptés. C'est là qu'interviennent les "générateurs de sites statiques": ils permettent de développer avec du code dynamique, avant de le compiler en fichiers HTML, CSS et JavaScript traditionnels. Pour ma part, j'ai fait le choix de [Hugo](https://gohugo.io/).
+Cependant, étant donné la complexité de développement d'un site statique de A à Z, concevoir un espace plus élaboré comme un blog s'avère vite incongru et bien trop long à maintenir sans outils adaptés. C'est là qu'interviennent les "générateurs de sites statiques": ils permettent de développer avec du code dynamique, avant de le compiler en fichiers HTML, CSS et JavaScript traditionnels. Pour ma part, j'ai fait le choix de [Hugo](https://gohugo.io/).
 
 # Pourquoi [Hugo](https://gohugo.io/) et qu'est-ce que c'est donc ?
 
