@@ -28,17 +28,14 @@ Ce guide explique comment installer Wireshark proprement, à jour et de manière
 
 ## 1. Ajouter le PPA officiel Wireshark (version stable et récente):
 
-Si vous souhaitez utiliser une version plus récente que celle fournie par Ubuntu, vous pouvez ajouter le dépôt officiel maintenu par l'équipe de développement.
-
-Le PPA officiel permet d'obtenir les dernières versions stables de Wireshark avant leur intégration dans les dépôts Ubuntu (`apt(8)`).
+Si vous souhaitez utiliser une version plus récente que celle fournie par Ubuntu, vous pouvez ajouter le dépôt PPA officiel maintenu par l'équipe de développement.
+Le PPA officiel permet d'obtenir les dernières versions stables de Wireshark avant leur intégration dans les dépôts Ubuntu.
 
 Pour l'ajouter à votre système, exécutez les commandes suivantes (elles nécessitent les privilèges super‑utilisateur):
 ```bash
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
-
-L'ajout de ce PPA permet d'installer et de maintenir Wireshark à jour avec une version stable plus récente que celle proposée par les dépôts Ubuntu.
 
 > Je ne vais pas m'étendre davantage sur ce qu'est un PPA dans ce guide. J'en parlerai peut‑être de façon plus détaillée dans un article dédié. Pour l'instant, il suffit simplement de retenir qu'un PPA est un dépôt logiciel supplémentaire permettant d'obtenir des versions plus récentes que celles fournies par Ubuntu.
 
@@ -53,7 +50,7 @@ Pendant l'installation, Ubuntu affiche une question importante:
 
 - *Allow non-superusers to capture packets?*
 
-> (ce qui signifie: *"Autoriser les utilisateurs non administrateurs à capturer des paquets réseau"*)
+> (ce qui signifie: *"Autoriser les utilisateurs non administrateurs à capturer des paquets réseau?"*)
 
 Il est recommandé de répondre: `Yes`
 
