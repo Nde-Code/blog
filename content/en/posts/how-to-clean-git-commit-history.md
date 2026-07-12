@@ -95,7 +95,10 @@ git push -u origin main --force
 
 **Warning:** as mentioned earlier, this guide assumes that `main` is the branch being reset. Make sure you use the correct branch name according to your repository configuration.
 
-**Note:** if you also want to remove the other remote branches, run the following command for each branch you want to delete: `git push origin --delete <branch_name>`
+**Note:** if you also want to remove the other remote branches, run the following command for each branch you want to delete:
+```bash
+git push origin --delete <branch_name>
+```
 
 # Conclusion:
 

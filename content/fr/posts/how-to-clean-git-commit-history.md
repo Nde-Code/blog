@@ -95,7 +95,10 @@ git push -u origin main --force
 
 **Attention:** ici aussi, l'envoi est effectué vers `main`, c'est-à-dire la branche réinitialisée précédemment. Vérifiez impérativement que le nom de branche correspond bien à votre configuration.
 
-**Note:** si vous souhaitez également supprimer les autres branches distantes, exécutez la commande suivante pour chacune d'elles: `git push origin --delete <nom_de_la_branche>`
+**Note:** si vous souhaitez également supprimer les autres branches distantes, exécutez la commande suivante pour chacune d'elles:
+```bash
+git push origin --delete <nom_de_la_branche>
+```
 
 # Conclusion:
 
