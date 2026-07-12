@@ -14,7 +14,7 @@ description: "Guide complet, sécurisé et reproductible pour installer Wireshar
 
 - **Simple à prendre en main:** son interface est intuitive et permet de réaliser rapidement ses premières captures.
 
-- **Gratuit et open‑source:** le projet est entièrement libre: son code source est disponible sur GitLab ([https://gitlab.com/wireshark/wireshark](https://gitlab.com/wireshark/wireshark)) et en miroir sur GitHub ([https://github.com/wireshark/wireshark](https://github.com/wireshark/wireshark)). Cette transparence facilite les audits de sécurité et contribue à l'amélioration continue du logiciel.
+- **Gratuit et open source:** le projet est entièrement libre: son code source est disponible sur GitLab ([https://gitlab.com/wireshark/wireshark](https://gitlab.com/wireshark/wireshark)) et en miroir sur GitHub ([https://github.com/wireshark/wireshark](https://github.com/wireshark/wireshark)). Cette transparence facilite les audits de sécurité et contribue à l'amélioration continue du logiciel.
 
 - **Extrêmement complet et optimisé:** Wireshark prend en charge des centaines de protocoles réseau, du plus courant au plus spécialisé. Il permet une analyse fine, jusqu'au niveau hexadécimal ou binaire, et propose de nombreuses fonctionnalités avancées: filtres puissants, statistiques détaillées, reconstruction de flux, détection d'anomalies, etc. Il répond ainsi aux besoins de tous les profils, du débutant au professionnel.
 

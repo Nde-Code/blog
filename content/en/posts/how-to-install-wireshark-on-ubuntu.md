@@ -1,7 +1,7 @@
 ---
 title: "Secure installation of Wireshark on Ubuntu"
 date: 2026-07-11
-draft: true
+draft: false
 tags: ["Wireshark", "Ubuntu", "Linux"]
 categories: ["Linux", "Wireshark", "Networking"]
 author: "Nathan Debilloëz"
