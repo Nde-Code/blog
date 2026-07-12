@@ -28,13 +28,16 @@ Avoid blindly copying and pasting commands. Understanding what each command does
 
 ## 1. Add the Wireshark PPA (latest stable release):
 
-If you want to use a newer version than the one provided by Ubuntu, you can add the PPA maintained by the Wireshark development team. This PPA provides the latest stable Wireshark releases before they are integrated into Ubuntu's official repositories.
+We will use the PPA maintained by the Wireshark development team.  
+This repository provides access to the latest stable releases, which are often significantly more up to date than the versions available in the official Ubuntu repositories, whose release cycle is generally slower.
 
 To add it to your system, run the following commands (they require root privileges):
 ```bash
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
+
+This PPA is the recommended method for installing a current version of Wireshark on Ubuntu.
 
 > I won't go into detail about PPAs in this guide. I may cover them more thoroughly in a dedicated article in the future. For now, simply remember that a PPA (Personal Package Archive) is an additional software repository that provides newer package versions than those available in Ubuntu's official repositories.
 
