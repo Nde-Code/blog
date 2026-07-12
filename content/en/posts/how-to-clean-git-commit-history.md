@@ -24,13 +24,17 @@ This may seem like an unusual tutorial, but it's more common than you might thin
 
 > **Note:** this article assumes your main branch is named `main` and that this is the branch on which the cleanup will be performed. Although this is now the standard on platforms like GitHub or GitLab, please check your repository. If your default branch has a different name, simply adjust the commands accordingly. I will point out the steps where this requires extra attention.
 
-# 1. Local cleanup:
+# Description of the procedure:
+
+Make sure you understand the handling as well as the implications of what will be done.
+
+## 1. Local cleanup:
 
 First, clone the repository containing the `main` branch you want to reset.
 
 Next, open a terminal at the root of your project, then follow the steps below and run the associated commands:
 
-## Step 1, remove the `.git` folder:
+### Step 1, remove the `.git` folder:
 
 * **Windows (via PowerShell):**
 ```powershell
@@ -44,7 +48,7 @@ rm -rf .git
 
 This completely removes the local Git history, including commits, local branches, and repository configuration.
 
-## Step 2, reset the repository:
+### Step 2, reset the repository:
 
 ```bash
 # Initialize a new empty repository:
@@ -57,7 +61,7 @@ git add .
 git commit -m "chore: reset repository history and initialize fresh project state."
 ```
 
-# 2. Configure the main branch:
+## 2. Configure the main branch:
 
 Rename the current branch to `main`:
 ```bash
@@ -66,7 +70,7 @@ git branch -M main
 
 **Note:** this command renames the current branch to `main`. If your repository uses a different name for its main branch, adjust the command accordingly.
 
-# 3. Add the remote repository and force-push:
+## 3. Add the remote repository and force-push:
 
 > Replace the URL below with your actual GitHub repository URL.
 

@@ -164,6 +164,10 @@ L'icône devrait désormais apparaître correctement.
 
 > En toute honnêteté, je n'ai pas rencontré ce problème avec la version d'Ubuntu mentionnée au début de l'article. Cette correction est donc proposée comme solution de contournement pour les systèmes où GNOME ne réalise pas correctement l'association entre la fenêtre et le lanceur `.desktop`.
 
+# Conclusion
+
+En suivant ce guide, vous disposez désormais d'une installation de Wireshark propre, sécurisée et conforme aux bonnes pratiques Linux. L'utilisation du groupe `wireshark` et des capabilities attribuées à `dumpcap` permet de capturer des paquets sans recourir à `sudo`, tout en maintenant un niveau de sécurité élevé.
+
 # Sources:
 
 - [https://www.wireshark.org/docs/wsug_html_chunked/](https://www.wireshark.org/docs/wsug_html_chunked/)

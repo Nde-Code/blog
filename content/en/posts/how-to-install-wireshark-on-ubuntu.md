@@ -161,6 +161,10 @@ The correct icon should now be displayed.
 
 > To be completely transparent, I did not encounter this issue on the Ubuntu version mentioned at the beginning of this article. This fix is therefore provided as a workaround for systems where GNOME does not correctly associate the application window with its `.desktop` launcher.
 
+# Conclusion
+
+By following this guide, you now have a clean, secure, and Linux‑compliant installation of Wireshark. Using the `wireshark` group together with the capabilities assigned to `dumpcap` enables packet capture without `sudo`, while maintaining a strong security posture.
+
 # Sources:
 
 - [https://www.wireshark.org/docs/wsug_html_chunked/](https://www.wireshark.org/docs/wsug_html_chunked/)

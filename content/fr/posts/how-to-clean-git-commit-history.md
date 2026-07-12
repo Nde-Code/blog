@@ -24,13 +24,17 @@ Cela peut paraître incongru comme didacticiel, mais c'est bien plus fréquent q
 
 > **Note:** cet article part du principe que votre branche principale est `main` et que c'est sur celle-ci que l'on va effectuer le nettoyage. Bien que ce soit le standard actuel sur des plateformes comme GitHub ou GitLab, pensez à vérifier votre dépôt. Si votre branche par défaut porte un autre nom, il vous suffira d'adapter les commandes en conséquence. Je vous indiquerai les étapes où cette vigilance est nécessaire.
 
-# 1. Nettoyage local:
+# Description de la procédure:
+
+Assurez-vous de bien comprendre la manipulation ainsi que les implications de ce qui va être fait.
+
+## 1. Nettoyage local:
 
 Avant même de commencer, clonez le dépôt contenant la branche `main` à nettoyer.
 
 Ensuite, ouvrez un terminal à la racine du projet, puis suivez les étapes ci-dessous et exécutez les commandes associées: 
 
-## Étape 1, supprimer le dossier `.git`:
+### Étape 1, supprimer le dossier `.git`:
 
 * **Windows (via PowerShell):**
 ```powershell
@@ -44,7 +48,7 @@ rm -rf .git
 
 Cela supprime entièrement l'historique Git local, y compris les *commits*, les branches locales et la configuration du dépôt.
 
-## Étape 2, réinitialiser le dépôt:
+### Étape 2, réinitialiser le dépôt:
 
 ```bash
 # Initialiser un nouveau dépôt vide:
@@ -57,7 +61,7 @@ git add .
 git commit -m "chore: reset repository history and initialize fresh project state."  
 ```
 
-# 2. Configurer la branche principale:
+## 2. Configurer la branche principale:
 
 On renomme la branche principale du dépôt en `main`:
 ```bash
@@ -66,7 +70,7 @@ git branch -M main
 
 **Note:** cette commande renomme la branche courante en `main`. Si votre dépôt utilise un autre nom pour sa branche principale, adaptez la commande en conséquence.
 
-# 3. Lier au dépôt distant et forcer le *push*:
+## 3. Lier au dépôt distant et forcer le *push*:
 
 > Remplacer l'URL ci-dessous par celle du dit dépôt GitHub.
 
