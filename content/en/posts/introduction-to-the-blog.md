@@ -30,7 +30,7 @@ As mentioned before, [Hugo](https://gohugo.io/) is a static website generator. T
 
 I chose Hugo for several reasons:
 
-* **It is open-source:** and that is an ecosystem I am particularly fond of.
+* **It is open source:** and that is an ecosystem I am particularly fond of.
 * **It is extremely fast:** developed in Go, its compilation only takes a few milliseconds (at most)!
 * **It is highly modular and comprehensive:** it offers many themes and extensions, but most importantly, a very active community and a solid reputation established for years in the field.
 
@@ -48,7 +48,7 @@ There isn't much more to say: I liked the theme as it was, it met all my expecta
 
 # The project's source code:
 
-As usual, I release all my personal digital work as open-source.
+As usual, I release all my personal digital work as open source.
 
 Although it might not be super interesting, unless you want to check out my configuration and my few modifications, I have, as always, put all the code for this blog on my GitHub, which you can check out here: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog)
 

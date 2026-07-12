@@ -26,12 +26,12 @@ Ce guide explique comment installer Wireshark proprement, à jour et de manière
 
 Évitez le copier-coller systématique des commandes: comprendre leur rôle vous aidera à diagnostiquer plus facilement un éventuel problème.
 
-## 1. Ajouter le PPA officiel Wireshark (version stable et récente):
+## 1. Ajouter le PPA Wireshark (version stable et récente):
 
-Si vous souhaitez utiliser une version plus récente que celle fournie par Ubuntu, vous pouvez ajouter le dépôt PPA officiel maintenu par l'équipe de développement.
-Le PPA officiel permet d'obtenir les dernières versions stables de Wireshark avant leur intégration dans les dépôts Ubuntu.
+Si vous souhaitez utiliser une version plus récente que celle fournie par Ubuntu, vous pouvez ajouter le PPA maintenu par l'équipe de développement de Wireshark.
+Ce PPA permet d'obtenir les dernières versions stables de Wireshark avant leur intégration dans les dépôts Ubuntu.
 
-Pour l'ajouter à votre système, exécutez les commandes suivantes (elles nécessitent les privilèges super‑utilisateur):
+Pour l'ajouter à votre système, exécutez les commandes suivantes (elles nécessitent des privilèges administrateur):
 ```bash
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
@@ -77,7 +77,7 @@ Une fois cette commande exécutée, les changements ne seront appliqués qu'apr�
 
 ## 4. Vérifier que les permissions sont correctes:
 
-Après avoir ajouté votre utilisateur au groupe `wireshark`, il est important de vérifier que la configuration appliquée correspond bien à ce qui est attendu. 
+Après avoir ajouté votre utilisateur au groupe `wireshark`, il est important de vérifier que la configuration appliquée correspond bien à ce qui est attendu.
 
 Nous allons donc contrôler les *capabilities* du moteur de capture `dumpcap`, le seul composant de Wireshark autorisé à accéder directement aux interfaces réseau.
 
@@ -86,7 +86,7 @@ Pour cela, exécutez la commande suivante:
 getcap /usr/bin/dumpcap
 ```
 
-La sortie doit faire apparaître les capabilities `cap_net_raw` et `cap_net_admin` associées à `dumpcap`.
+La sortie doit faire apparaître les *capabilities* `cap_net_raw` et `cap_net_admin` associées à `dumpcap`.
 
 Ce résultat indique que seul `dumpcap` possède les permissions réseau nécessaires, et non Wireshark lui‑même.
 
@@ -162,7 +162,7 @@ Si l'icône incorrecte est déjà présente dans le *Dock*, retirez-la puis épi
 
 L'icône devrait désormais apparaître correctement.
 
-> En toute honnêteté, je n'ai pas rencontré ce problème avec la version d'Ubuntu mentionnée au début de l'article. Cette correction est donc proposée à titre préventif pour les systèmes où GNOME ne réalise pas correctement l'association entre la fenêtre et le lanceur `.desktop`.
+> En toute honnêteté, je n'ai pas rencontré ce problème avec la version d'Ubuntu mentionnée au début de l'article. Cette correction est donc proposée comme solution de contournement pour les systèmes où GNOME ne réalise pas correctement l'association entre la fenêtre et le lanceur `.desktop`.
 
 # Sources:
 

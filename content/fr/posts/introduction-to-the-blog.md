@@ -30,7 +30,7 @@ Cependant, étant donné la complexité de développement d'un site statique de 
 
 J'ai choisi Hugo pour plusieurs raisons:
 
-* **Il est open-source:** et c'est un écosystème que j'affectionne particulièrement.
+* **Il est open source:** et c'est un écosystème que j'affectionne particulièrement.
 * **Il est extrêmement rapide:** développé en Go, sa compilation ne prend que quelques millisecondes (et encore) !
 * **Il est très modulable et complet:** il dispose de nombreux thèmes, d'extensions, mais surtout d'une communauté très active et d'une notoriété solidement établie depuis des années dans le domaine.
 
@@ -48,7 +48,7 @@ Il n'y a pas vraiment d'autre explication à donner: le thème me plaisait tel q
 
 # Le code source de projet:
 
-Comme d'habitude, je mets tout mon travail numérique personnel en open-source.
+Comme d'habitude, je mets tout mon travail numérique personnel en open source.
 
 Bien que ce ne soit pas super intéressant, si ce n'est pour voir ma configuration et mes quelques modifications, j'ai, comme d'habitude, mis tout le code de ce projet sur mon GitHub, que vous pouvez aller consulter ici: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog)
 

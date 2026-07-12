@@ -10,36 +10,33 @@ description: "A complete, secure, and reproducible guide to installing Wireshark
 
 # Introduction:
 
-[Wireshark](https://www.wireshark.org/) is the most widely used network capture and analysis tool in the world. It has become essential in system administration, cybersecurity, network diagnostics, and education thanks to several key strengths:
+[Wireshark](https://www.wireshark.org/) is the world's most widely used network protocol analyzer. It has become an essential tool for system administrators, cybersecurity professionals, network engineers, and educators thanks to several key advantages:
 
-- **Very easy to use:** Wireshark provides a clean, intuitive, and well‑organized graphical interface. Even without prior experience, users can start capturing and analyzing packets within minutes.
+- **Easy to use:** its intuitive interface allows users to capture and analyze network traffic with minimal learning curve.
 
-- **Free and open‑source:** the project is fully open: its source code is available on GitLab ([https://gitlab.com/wireshark/wireshark](https://gitlab.com/wireshark/wireshark)) and mirrored on GitHub ([https://github.com/wireshark/wireshark](https://github.com/wireshark/wireshark)). This transparency ensures strong security and continuous development.
+- **Free and open source:** Wireshark is fully open source. Its source code is available on GitLab ([https://gitlab.com/wireshark/wireshark](https://gitlab.com/wireshark/wireshark)) and mirrored on GitHub ([https://github.com/wireshark/wireshark](https://github.com/wireshark/wireshark)). This transparency makes security audits easier and enables continuous improvements from the community.
 
-- **Extremely complete and optimized:** Wireshark supports hundreds of network protocols, from the most common to the most specialized. It allows deep inspection down to the hexadecimal or binary level and offers numerous advanced features: powerful filters, detailed statistics, stream reconstruction, anomaly detection, and more. It meets the needs of all users, from beginners to professionals.
+- **Feature-rich and highly optimized:** Wireshark supports hundreds of network protocols, from the most common to highly specialized ones. It provides in-depth packet analysis down to the hexadecimal and binary levels, along with powerful features such as advanced display filters, detailed statistics, stream reassembly, anomaly detection, and much more. Whether you are a beginner or an experienced professional, Wireshark offers the tools required for comprehensive network analysis.
 
-This guide explains how to install Wireshark cleanly, up‑to‑date, and securely on Ubuntu, enabling packet capture **without sudo** by using the `wireshark` group and the Linux *capabilities* assigned to the `dumpcap` binary.
+This guide explains how to install Wireshark on Ubuntu using a clean, up-to-date, and secure approach. It also shows how to capture packets **without `sudo`** by configuring the `wireshark` group and assigning the required Linux *capabilities* to the `dumpcap` binary.
 
-> It was written after performing the installation on an Ubuntu system, one of the Linux distributions where Wireshark works most efficiently, but the same principles apply to most Debian‑based distributions.
+> This guide was written after performing the installation on an Ubuntu system (24.04.4 LTS), one of the most widely used Linux distributions. However, the same principles apply to most Debian-based distributions.
 
 # Description of the installation procedure:
 
-Make sure you fully understand everything explained in this guide. Above all, avoid simply copying and pasting without thinking, it’s pointless and won’t help you identify the root cause of an issue if something goes wrong.
+Avoid blindly copying and pasting commands. Understanding what each command does will make it much easier to troubleshoot any issues that may arise.
 
-## 1. Add the official Wireshark PPA (stable and up‑to‑date):
+## 1. Add the Wireshark PPA (latest stable release):
 
-Before installing Wireshark, it is recommended to add the official repository maintained by the development team.  
-This PPA provides stable, recent, and properly packaged versions of Wireshark for Ubuntu.
+If you want to use a newer version than the one provided by Ubuntu, you can add the PPA maintained by the Wireshark development team. This PPA provides the latest stable Wireshark releases before they are integrated into Ubuntu's official repositories.
 
-To add it to your system, run the following commands (they require superuser privileges):
+To add it to your system, run the following commands (they require root privileges):
 ```bash
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
 
-Adding this PPA ensures that Wireshark will be installed, and kept up to date, with the latest stable version available, rather than the sometimes older version included in Ubuntu's default repositories.
-
-> I won't go into detail here about what a PPA is. I may cover it more thoroughly in a dedicated article later. For now, simply remember that a PPA is an additional software repository that allows you to obtain more recent versions than those provided by Ubuntu.
+> I won't go into detail about PPAs in this guide. I may cover them more thoroughly in a dedicated article in the future. For now, simply remember that a PPA (Personal Package Archive) is an additional software repository that provides newer package versions than those available in Ubuntu's official repositories.
 
 ## 2. Install Wireshark:
 
@@ -48,94 +45,128 @@ Installing Wireshark is straightforward using `apt`:
 sudo apt install wireshark
 ```
 
-During the installation, Ubuntu will display an important prompt:
+During the installation process, Ubuntu will display an important prompt:
 
 - *Allow non-superusers to capture packets?*
 
-> (which means: *allow non‑administrator users to capture network packets*)
+It is recommended to answer: `Yes`
 
-You should select: `Yes`
+> If you choose `No`, you can still change this option later by reconfiguring the `wireshark-common` package.
 
-This option enables a secure and modern configuration in which only the capture engine (`dumpcap`) receives the necessary network permissions.
+This option enables a secure and modern configuration: only `dumpcap` is granted the required Linux *capabilities* (`CAP_NET_RAW` and `CAP_NET_ADMIN`), while the graphical interface runs without any special privileges.
 
-As a result, Wireshark can be used **without sudo**, while still following recommended security best practices.
+As a result, Wireshark can be used **without `sudo`**, while following security best practices.
 
-## 3. Add your user to the secure `wireshark` group:
+## 3. Add yourself to the `wireshark` security group:
 
-To capture packets **without using sudo**, you need to add your user (`$USER`) to the system group `wireshark`.
+To capture packets **without using `sudo`**, you need to add your user account (`$USER`) to the `wireshark` system group.
 
-This group is specifically designed to grant capture permissions in a secure and controlled way.
+This group is specifically designed to grant packet capture permissions in a secure way.
 
-On Linux, a *group* is a set of users who share specific permissions: the `wireshark` group allows network packet capture without granting full administrator privileges.
+On Linux, a *group* is a collection of users that share specific permissions. The `wireshark` group allows users to perform network captures without granting them full administrative privileges.
 
-To perform this operation, run the following command:
+To add your user to the group, run the following command:
 ```bash
 sudo usermod -aG wireshark $USER
 ```
 
-Once this command has been executed, the changes will only take effect after you log out and log back in to your user session. This step is essential for the group assignment to be properly applied.
+Once this command has been executed, the changes will only take effect after logging out and logging back into your user session. This step is required for the group membership update to be properly applied.
 
-## 4. Verify that the permissions are correct:
+## 4. Verify that the permissions are correctly configured:
 
-After adding your user to the `wireshark` group, it is important to ensure that the applied configuration matches what is expected.
+After adding your user account to the `wireshark` group, it is important to verify that the applied configuration matches the expected setup.
 
-We will now check the *capabilities* of the capture engine `dumpcap`, which is the only component of Wireshark allowed to access network interfaces directly.
+We will therefore check the *capabilities* assigned to the packet capture engine `dumpcap`, the only Wireshark component allowed to directly access network interfaces.
 
 To do this, run the following command:
 ```bash
 getcap /usr/bin/dumpcap
 ```
 
-This command should return:
-```text
-/usr/bin/dumpcap cap_net_admin,cap_net_raw=eip
-```
+The output should display the `cap_net_raw` and `cap_net_admin` *capabilities* assigned to `dumpcap`.
 
-This result indicates that only `dumpcap` has the required network permissions, and not Wireshark itself.
+This confirms that only `dumpcap` has the required network permissions, rather than Wireshark itself.
 
-This is exactly the intended configuration: it ensures secure use of the software while still allowing packet capture **without sudo**.
+This is the recommended configuration: it ensures secure use of the software while still allowing packet capture **without `sudo`**.
 
-> You can also verify that you are part of the `wireshark` group by running: `groups | grep "wireshark"`. If the terminal displays `wireshark` (often highlighted depending on your theme), it means the group assignment was applied correctly.
+> You can also verify that your user account is a member of the `wireshark` group by running: `groups | grep "wireshark"`. If the terminal displays `wireshark` (often highlighted depending on your terminal theme), it means that the group membership has been successfully applied.
 
 ## 5. Launch Wireshark without `sudo`:
 
-We have now reached the end of the guide: you can launch Wireshark directly from your terminal by typing:
+We have reached the end of the guide: you can now launch Wireshark directly from your terminal without administrative privileges:
 ```bash
 wireshark
 ```
 
-If the application starts correctly and you are able to capture packets, everything is working as expected: your installation is both functional and secure.
+If the application starts correctly and you are able to capture packets, your installation is working properly. Wireshark is then using the Linux security model as intended: only the capture engine `dumpcap` has the required network permissions, while the graphical interface runs with your regular user privileges.
 
-You can also pin Wireshark to the Ubuntu *Dock* or launch it from the search bar.
+Before considering the installation complete, you can perform a few additional checks.
 
-If Wireshark does not start or cannot capture packets, it is possible that one of the previous steps was not applied correctly.  
-In that case, you can calmly go through the guide again from the beginning, or perform a few online searches to identify the root cause (permissions, missing group assignment, incorrect capabilities, ...).
-
-# (Bonus) 6. Fix Wireshark's icon in the *Dock*:
-
-On certain versions of Ubuntu, Wireshark's icon may appear as a generic placeholder when pinned to the *Dock*.  
-This behavior occurs because the window class name does not match the `.desktop` file used by GNOME.
-
-To fix this issue, simply edit Wireshark's launcher file:
+To display the currently installed version of Wireshark, run:
 ```bash
-sudo gnome-text-editor /usr/share/applications/org.wireshark.Wireshark.desktop
+wireshark --version
 ```
 
-In the file that opens, add the following line at the end:
+This command displays the version of Wireshark currently installed on your system.
+
+You can also verify that `dumpcap` can access the available network interfaces:
+```bash
+dumpcap -D
 ```
+
+This command lists the capture interfaces detected by `dumpcap`. If they are displayed correctly, it confirms that the capture engine has the required permissions to access them.
+
+You can then pin Wireshark to the Ubuntu *Dock* or launch it directly from the application search menu.
+
+If it does not work as expected, a configuration step may not have been applied correctly. You can then check the following items:
+
+* your membership in the `wireshark` group;
+* the *capabilities* assigned to `dumpcap`;
+* the presence and configuration of the Wireshark PPA;
+* the correct installation of the required packages.
+
+## (Bonus) 6. Fix the Wireshark icon in the *Dock*:
+
+On some Ubuntu installations, the Wireshark icon may appear as a generic icon when it is pinned to the *Dock*.
+
+This issue occurs when GNOME is unable to correctly associate the Wireshark window with its corresponding `.desktop` launcher file. Adding the `StartupWMClass` property restores this association and allows the correct icon to be displayed in the *Dock*.
+
+To apply this fix properly, we will create a local copy of the Wireshark launcher file. This approach is preferable to directly modifying the system file, as it prevents your changes from being overwritten during future Wireshark updates.
+
+First, create the local directory used for custom application launchers:
+```bash
+mkdir -p ~/.local/share/applications
+```
+
+Then copy the official Wireshark `.desktop` file to this directory:
+```bash
+cp /usr/share/applications/org.wireshark.Wireshark.desktop ~/.local/share/applications/
+```
+
+Now open the local copy of the file using GNOME Text Editor:
+```bash
+gnome-text-editor ~/.local/share/applications/org.wireshark.Wireshark.desktop
+```
+
+Add the following line at the end of the file:
+```ini
 StartupWMClass=Wireshark
 ```
 
-Save the file, then restart Wireshark.
+Save the file, then completely close Wireshark if it is currently running.
 
-The icon should now display correctly in the Dock.
+If the incorrect icon is already present in the *Dock*, remove it and pin Wireshark again so that GNOME reloads the updated launcher file.
 
-> To be fully transparent, I did not encounter this issue myself with the version of Ubuntu mentioned at the beginning of the article.
+The correct icon should now be displayed.
+
+> To be completely transparent, I did not encounter this issue on the Ubuntu version mentioned at the beginning of this article. This fix is therefore provided as a workaround for systems where GNOME does not correctly associate the application window with its `.desktop` launcher.
 
 # Sources:
 
-- [https://askubuntu.com/questions/700712/how-to-install-wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
+- [https://www.wireshark.org/docs/wsug_html_chunked/](https://www.wireshark.org/docs/wsug_html_chunked/)
 
 - [https://launchpad.net/~wireshark-dev/+archive/ubuntu/stable](https://launchpad.net/~wireshark-dev/+archive/ubuntu/stable)
+
+- [https://askubuntu.com/questions/700712/how-to-install-wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
 - [https://www.youtube.com/watch?v=vd9dsMtWJmI](https://www.youtube.com/watch?v=vd9dsMtWJmI)
