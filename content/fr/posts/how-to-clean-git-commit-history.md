@@ -18,7 +18,7 @@ Cette manipulation peut sembler inhabituelle, mais elle est bien plus fréquente
 * **Pour une question de propreté:** après la phase d'initialisation d'un projet, il peut être utile de repartir sur un historique propre en supprimant les premiers *commits* liés à la phase de développement initiale.
 * **Pour repartir à zéro après une longue période:** après des changements importants, on peut souhaiter réinitialiser l'historique afin de repartir sur des bases claires et éviter toute confusion.
 
-**⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche distante `main`. Si d'autres personnes collaborent sur ce projet, il est fortement recommandé qu'elles suppriment leur version locale et reclonent le dépôt afin d'éviter des conflits majeurs.
+**⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche distante `main`. Si d'autres personnes collaborent sur ce projet, il est fortement recommandé qu'elles suppriment leur version locale et reclonent le dépôt (après manipulation) afin d'éviter des conflits majeurs.
 
 **Prérequis:** effectuez une sauvegarde du dépôt dont vous souhaitez réinitialiser l'historique des *commits*.
 

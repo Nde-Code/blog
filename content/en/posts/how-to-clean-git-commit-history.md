@@ -18,7 +18,7 @@ Although this may seem like an unusual operation, it's more common than you migh
 * **Cleaning up a project:** once the initial development phase is over, you may want to start with a clean history by removing the early work-in-progress commits.
 * **Starting fresh after major changes:** following a significant refactor or a long period of development, resetting the history can provide a clean baseline and make the repository easier to understand.
 
-> **⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the remote `main` branch. If other people collaborate on this project, they should delete their local copy and clone the repository again to avoid major conflicts.
+**⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the remote `main` branch. If other people collaborate on this project, they should delete their local copy and clone the repository (after the process) again to avoid major conflicts.
 
 **Prerequisite:** make a backup of the repository before removing its commit history.
 
