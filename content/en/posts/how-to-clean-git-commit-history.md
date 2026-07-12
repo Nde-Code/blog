@@ -48,17 +48,23 @@ rm -rf .git
 
 This completely removes the local Git history, including commits, local branches, and repository configuration.
 
-### Step 2, reset the repository:
+### Step 2, reinitialize the Git repository:
 
+Once the previous history has been removed, you need to create a fresh Git repository.
+
+To initialize a new repository, run the following command in your terminal:
 ```bash
-# Initialize a new empty repository:
 git init
+```
 
-# Add all current files:
+Next, stage all project files:
+```bash
 git add .
+```
 
-# Create the new first commit:
-git commit -m "chore: reset repository history and initialize fresh project state."
+Finally, create the initial commit for this new repository:
+```bash
+git commit -m "chore: reset repository history and initialize fresh project state"
 ```
 
 ## 2. Configure the main branch:
@@ -70,17 +76,21 @@ git branch -M main
 
 **Note:** this command renames the current branch to `main`. If your repository uses a different name for its main branch, adjust the command accordingly.
 
-## 3. Add the remote repository and force-push:
+## 3. Link the remote repository and force push:
 
-> Replace the URL below with your actual GitHub repository URL.
+> Replace the URL below with your GitHub repository URL.
 
+Add the remote repository:
 ```bash
-# Add the remote repository URL:
-git remote add origin https://github.com/<OWNER>/<REPOSITORY>.git
+git remote add origin https://github.com/<USERNAME>/<REPOSITORY>.git
+```
 
-# Force‑overwrite the remote history with the new local commit:
+Then force push the new history to the remote repository:
+```bash
 git push -u origin main --force
 ```
+
+> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware before running it.
 
 **Warning:** once again, we are pushing to `main`, the main branch as explained earlier. It is essential to verify and provide the correct branch name as defined in your configuration.
 
