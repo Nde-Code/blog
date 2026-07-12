@@ -38,8 +38,6 @@ sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
 
-Ce PPA est la méthode recommandée pour installer une version actuelle de Wireshark sur Ubuntu.
-
 > Je ne vais pas m'étendre davantage sur ce qu'est un PPA dans ce guide. J'en parlerai peut‑être de façon plus détaillée dans un article dédié. Pour l'instant, il suffit simplement de retenir qu'un PPA est un dépôt logiciel supplémentaire permettant d'obtenir des versions plus récentes que celles fournies par Ubuntu.
 
 ## 2. Installer Wireshark:
@@ -90,6 +88,8 @@ getcap /usr/bin/dumpcap
 La sortie doit faire apparaître les *capabilities* `cap_net_raw` et `cap_net_admin` associées à `dumpcap`, ce résultat indique que seul `dumpcap` possède les permissions réseau nécessaires, et non Wireshark lui‑même.
 
 C'est exactement la configuration recherchée: elle garantit une utilisation sécurisée du logiciel tout en permettant la capture **sans `sudo`**.
+
+Si cette commande ne renvoie aucun résultat, cela signifie que les *capabilities* n'ont pas été attribuées à `dumpcap`. Il est alors nécessaire de reconfigurer le paquet `wireshark-common`.
 
 > Vous pouvez également vérifier que vous appartenez bien au groupe `wireshark` en exécutant: `groups | grep "wireshark"`. Si le terminal affiche `wireshark` (souvent en couleur selon votre thème), cela signifie que l'ajout au groupe a été effectué correctement.
 
