@@ -28,8 +28,9 @@ Ce guide explique comment installer Wireshark proprement, à jour et de manière
 
 ## 1. Ajouter le PPA Wireshark (version stable et récente):
 
-Nous allons utiliser le PPA maintenu par l'équipe de développement de Wireshark.  
-Ce dépôt permet d'obtenir les versions stables les plus récentes, souvent bien plus à jour que celles disponibles dans les dépôts Ubuntu, dont le cycle de publication est plus lent.
+Pour notre installation, nous allons utiliser le PPA maintenu par l'équipe de développement de Wireshark.
+
+PPA permet d'obtenir les versions stables les plus récentes, souvent bien plus à jour que celles disponibles dans les dépôts Ubuntu, dont le cycle de publication est plus lent.
 
 Pour l'ajouter à votre système, exécutez les commandes suivantes (elles nécessitent des privilèges administrateur):
 ```bash
@@ -60,8 +61,6 @@ Il est recommandé de répondre: `Yes`
 
 Cette option active une configuration sécurisée et moderne: seul `dumpcap` reçoit les capacités Linux nécessaires (`CAP_NET_RAW` et `CAP_NET_ADMIN`), tandis que l'interface graphique fonctionne sans privilège particulier.
 
-Ainsi, Wireshark peut être utilisé **sans `sudo`**, tout en respectant les bonnes pratiques de sécurité.
-
 ## 3. S'ajouter au groupe sécurisé `wireshark`:
 
 Pour pouvoir capturer des paquets **sans utiliser `sudo`**, il est nécessaire d'ajouter votre utilisateur (`$USER`) au groupe système `wireshark`.
@@ -88,9 +87,7 @@ Pour cela, exécutez la commande suivante:
 getcap /usr/bin/dumpcap
 ```
 
-La sortie doit faire apparaître les *capabilities* `cap_net_raw` et `cap_net_admin` associées à `dumpcap`.
-
-Ce résultat indique que seul `dumpcap` possède les permissions réseau nécessaires, et non Wireshark lui‑même.
+La sortie doit faire apparaître les *capabilities* `cap_net_raw` et `cap_net_admin` associées à `dumpcap`, ce résultat indique que seul `dumpcap` possède les permissions réseau nécessaires, et non Wireshark lui‑même.
 
 C'est exactement la configuration recherchée: elle garantit une utilisation sécurisée du logiciel tout en permettant la capture **sans `sudo`**.
 
@@ -119,7 +116,7 @@ Vous pouvez également vérifier que `dumpcap` est capable d'accéder aux interf
 dumpcap -D
 ```
 
-Cette commande liste les interfaces de capture détectées par `dumpcap`. Si elles apparaissent correctement, cela confirme que le moteur de capture dispose des permissions nécessaires pour y accéder.
+Cette commande liste les interfaces de capture détectées par `dumpcap`, si elles apparaissent correctement, cela confirme que le moteur de capture dispose des permissions nécessaires pour y accéder.
 
 Vous pouvez ensuite épingler Wireshark dans le *Dock* d'Ubuntu ou le lancer directement depuis la barre de recherche des applications.
 
@@ -168,7 +165,7 @@ L'icône devrait désormais apparaître correctement.
 
 # Conclusion
 
-En suivant ce guide, vous disposez désormais d'une installation de Wireshark propre, sécurisée et conforme aux bonnes pratiques Linux. L'utilisation du groupe `wireshark` et des capabilities attribuées à `dumpcap` permet de capturer des paquets sans recourir à `sudo`, tout en maintenant un niveau de sécurité élevé.
+En suivant ce guide, vous disposez désormais d'une installation de Wireshark propre, sécurisée et conforme aux bonnes pratiques Linux. L'utilisation du groupe `wireshark` et des *capabilities* attribuées à `dumpcap` permet de capturer des paquets **sans recourir à `sudo`**, tout en maintenant un niveau de sécurité élevé.
 
 # Sources:
 
