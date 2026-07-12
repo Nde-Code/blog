@@ -1,68 +1,70 @@
 ---
-title: "Reset the Git history of a project's main branch"
+title: "How to Completely Reset a Git Repository's History"
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
 categories: ["Git"]
 author: "Nathan Debilloëz"
-description: "While it may seem surprising, this is an operation that needs to be performed from time to time, often more frequently than you might think. Given the lack of documentation on this topic, I decided to write a short tutorial."
+description: "It may come as a surprise, but this is an operation you'll occasionally need to perform—more often than you might think. Since there is relatively little documentation on the subject, I decided to write this short tutorial."
 ---
 
 # Introduction:
 
-This guide explains how to reset the commit history of the main branch locally, before force-updating the remote repository to start fresh.
+This guide explains how to completely reset a Git repository's history by removing the previous local Git history, recreating a clean repository, and then replacing the history of the remote repository.
 
-This may seem like an unusual tutorial, but it's more common than you might think. For example:
+Although this may seem like an unusual operation, it's more common than you might think. Typical use cases include:
 
-* **If you've exposed secrets:** in your source code, it's essential to perform a thorough cleanup, even if the credentials have already been revoked.
-* **To keep the repository clean:** sometimes, when working on the foundations of a project, you may want to remove early experiments in order to keep the repository clean.
-* **After a long period of inactivity:** following major changes, you may want to reset the history to reflect the project's new starting point.
+* **Accidentally exposing secrets:** always revoke them first (API keys, access tokens, passwords, etc.). Resetting the repository history helps remove them from the repository's visible history, but it **does not** guarantee that the data has disappeared from existing clones, forks, or caches.
+* **Cleaning up a project:** once the initial development phase is over, you may want to start with a clean history by removing the early work-in-progress commits.
+* **Starting fresh after major changes:** following a significant refactor or a long period of development, resetting the history can provide a clean baseline and make the repository easier to understand.
 
-**⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the main branch on the remote repository. If other people collaborate on this project, they will need to delete their local copy and re-clone the repository to avoid major conflicts.
+> **⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the remote `main` branch. If other people collaborate on this project, they should delete their local copy and clone the repository again to avoid major conflicts.
 
-**Prerequisite:** before proceeding, back up the repository.
+**Prerequisite:** make a backup of the repository before removing its commit history.
 
-> **Note:** this article assumes your main branch is named `main` and that this is the branch on which the cleanup will be performed. Although this is now the standard on platforms like GitHub or GitLab, please check your repository. If your default branch has a different name, simply adjust the commands accordingly. I will point out the steps where this requires extra attention.
+> **Note:** this guide assumes that your default branch is `main` and that you'll be resetting its history. While `main` is now the standard default branch on platforms such as GitHub and GitLab, you should verify your repository first. If your default branch has a different name, simply replace `main` with the appropriate branch name in the commands throughout this guide. I'll point out the steps where this matters.
 
-# Description of the procedure:
+# Procedure overview:
 
-Make sure you understand the handling as well as the implications of what will be done.
+Make sure you fully understand the process and the implications of the actions that will be performed.
 
 ## 1. Local cleanup:
 
-First, clone the repository containing the `main` branch you want to reset.
+Start by cloning the repository containing the `main` branch you want to reset.
 
-Next, open a terminal at the root of your project, then follow the steps below and run the associated commands:
+> Cloning allows you to retrieve the current state of the project's files before removing the previous Git history.
 
-### Step 1, remove the `.git` folder:
+Then, open a terminal at the root of the project and follow the steps below, running the corresponding commands.
 
-* **Windows (via PowerShell):**
+### Step 1, remove the `.git` directory:
+
+* **Windows (using PowerShell):**
 ```powershell
 Remove-Item -Recurse -Force .git
 ```
 
-* **Mac / Linux:**
+* **macOS / Linux:**
 ```bash
 rm -rf .git
 ```
 
-This completely removes the local Git history, including commits, local branches, and repository configuration.
+This removes the `.git` directory, which contains all Git metadata for the repository: commit history, local branches, tags, and associated configuration.
 
 ### Step 2, reinitialize the Git repository:
 
-Once the previous history has been removed, you need to create a fresh Git repository.
+Once the previous history has been removed, you need to initialize a fresh Git repository.
 
-To initialize a new repository, run the following command in your terminal:
+Run the following command in your terminal to create the new repository:
 ```bash
 git init
 ```
 
-Next, stage all project files:
+Then, add all project files to the staging area:
 ```bash
 git add .
 ```
 
-Finally, create the initial commit for this new repository:
+Finally, create the first commit of this new repository:
 ```bash
 git commit -m "chore: reset repository history and initialize fresh project state"
 ```
@@ -76,26 +78,25 @@ git branch -M main
 
 **Note:** this command renames the current branch to `main`. If your repository uses a different name for its main branch, adjust the command accordingly.
 
-## 3. Link the remote repository and force push:
-
-> Replace the URL below with your GitHub repository URL.
+## 3. Configure the remote repository and force push the new history:
 
 Add the remote repository:
+> Replace the URL below with the URL of your GitHub repository.
 ```bash
-git remote add origin https://github.com/<USERNAME>/<REPOSITORY>.git
+git remote add origin https://github.com/<NAME>/<PROJECT_NAME>.git
 ```
 
-Then force push the new history to the remote repository:
+Then, force push the new history to the remote repository:
 ```bash
 git push -u origin main --force
 ```
 
-> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware before running it.
+> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware of this change before running it.
 
-**Warning:** once again, we are pushing to `main`, the main branch as explained earlier. It is essential to verify and provide the correct branch name as defined in your configuration.
+**Warning:** as mentioned earlier, this guide assumes that `main` is the branch being reset. Make sure you use the correct branch name according to your repository configuration.
 
-**Note:** if you also want to remove **all** remote branches in addition to resetting the main branch history, you can run the following command before or after the *push*: `git push origin --delete <branch_name>`. Repeat this command for each branch you want to delete.
+**Note:** if you also want to remove the other remote branches, run the following command for each branch you want to delete: `git push origin --delete <branch_name>`
 
 # Conclusion:
 
-Once this operation is complete, the remote `main` branch will start from a clean, single commit. Your project now has a fresh history, ready for new development.
+Once this operation is complete, the remote `main` branch will contain a single commit representing the new initial state of the project. The previous history will no longer be available from the remote `main` branch.

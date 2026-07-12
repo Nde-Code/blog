@@ -4,7 +4,7 @@ date: 2026-06-21
 draft: false
 tags: ["Hugo", "GitHub", "GitHub Pages"]
 categories: ["General"]
-author: "Nathan Debilloez"
+author: "Nathan Debilloëz"
 description: "I had long wanted to add a section dedicated to articles on my main website. Since it wasn't really suited for that purpose, I decided to create a separate and independent website entirely devoted to this part."
 ---
 
