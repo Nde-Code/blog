@@ -1,5 +1,5 @@
 ---
-title: "How to Completely Reset a Git Repository's History"
+title: "How to completely reset a Git repository's history"
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
