@@ -24,7 +24,7 @@ C'est pourquoi j'ai choisi d'utiliser un site web classique, dit "statique", à 
 
 Cependant, étant donné la complexité de développement d'un site statique de A à Z, concevoir un espace plus élaboré comme un blog s'avère vite incongru et bien trop long à maintenir sans outils adaptés. C'est là qu'interviennent les "générateurs de sites statiques": ils permettent de développer avec du code dynamique, avant de le compiler en fichiers HTML, CSS et JavaScript traditionnels. Pour ma part, j'ai fait le choix de [Hugo](https://gohugo.io/).
 
-# Pourquoi [Hugo](https://gohugo.io/) et qu'est-ce que c'est donc ?
+# Pourquoi Hugo et qu'est-ce que c'est donc ?
 
 [Hugo](https://gohugo.io/) est, comme mentionné précédemment, un générateur de sites web statiques. Cela signifie qu'il prend en entrée du code dynamique, un peu à la manière de Django, EJS, etc... mais qu'après compilation, on obtient tout simplement des fichiers web classiques. Cela accélère et facilite grandement le développement de sites statiques qui, lorsqu'ils sont faits entièrement à la main, demandent souvent beaucoup de répétitions et de copier-coller du même bloc de code. 
 
@@ -34,7 +34,7 @@ J'ai choisi Hugo pour plusieurs raisons:
 * **Il est extrêmement rapide:** développé en Go, sa compilation ne prend que quelques millisecondes (et encore) !
 * **Il est très modulable et complet:** il dispose de nombreux thèmes, d'extensions, mais surtout d'une communauté très active et d'une notoriété solidement établie depuis des années dans le domaine.
 
-Je ferai sans doute un (ou des) article(s) sur [Hugo](https://gohugo.io/) prochainement, parce que c'est vraiment un outil super.
+Je ferai sans doute un (ou des) article(s) sur Hugo prochainement, parce que c'est vraiment un outil super.
 
 # Le thème que j'ai choisi et pourquoi:
 

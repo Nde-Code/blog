@@ -24,7 +24,7 @@ That is why I chose to use a classic, so-called "static" website, just like my m
 
 However, given the complexity of developing a static website from scratch, building a more elaborate space like a blog quickly becomes impractical and far too time-consuming to maintain without the right tools. That is where "static site generators" come in: they allow you to develop with dynamic code before compiling it into traditional HTML, CSS, and JavaScript files. For my part, I chose [Hugo](https://gohugo.io/).
 
-# Why [Hugo](https://gohugo.io/) and what exactly is it?
+# Why Hugo and what exactly is it?
 
 As mentioned before, [Hugo](https://gohugo.io/) is a static website generator. This means that it takes dynamic code as input, a bit like Django or EJS, but after compilation, you simply get classic web files. This greatly speeds up and eases the development of static sites which, when done entirely by hand, often require a lot of repetition and copying-and-pasting of the same code block. 
 
@@ -34,7 +34,7 @@ I chose Hugo for several reasons:
 * **It is extremely fast:** developed in Go, its compilation only takes a few milliseconds (at most)!
 * **It is highly modular and comprehensive:** it offers many themes and extensions, but most importantly, a very active community and a solid reputation established for years in the field.
 
-I will probably write an article (or more) about [Hugo](https://gohugo.io/) soon, because it really is a great tool.
+I will probably write an article (or more) about Hugo soon, because it really is a great tool.
 
 # The theme I chose and why:
 
