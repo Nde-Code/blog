@@ -1,5 +1,5 @@
 ---
-title: "Réinitialiser complètement l'historique Git d'un projet"
+title: "Recréer l'historique Git d'un projet à partir de son état actuel"
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
@@ -10,15 +10,15 @@ description: "Cela peut surprendre, mais c'est une opération qu'il faut parfois
 
 # Introduction:
 
-Ce guide explique comment réinitialiser complètement l'historique Git d'un projet en supprimant puis recréant l'historique Git local, avant d'écraser l'historique du dépôt distant.
+Ce guide explique comment recréer l'historique Git d'un projet à partir de son état actuel en supprimant les métadonnées Git du dépôt local, en initialisant un nouveau dépôt, puis en remplaçant l'historique de la branche distante `main`.
 
-Cette manipulation peut sembler inhabituelle, mais elle est bien plus fréquente qu'on ne l'imagine, par exemple:
+Bien que peu courante au quotidien, cette opération est utile dans plusieurs situations spécifiques, par exemple:
 
-* **Si vous exposez des secrets:** commencez toujours par les révoquer (clés API, jetons, mots de passe, etc.). La réinitialisation de l'historique permet ensuite de nettoyer le dépôt, mais elle ne garantit pas que les données aient disparu de tous les clones, *forks* ou caches existants.
+* **Si vous exposez des secrets:** commencez toujours par les révoquer (clés API, jetons, mots de passe, etc.). La réinitialisation retire ces informations de l'historique visible du dépôt, mais elle ne **garantit pas** que les données aient disparu de tous les clones, *forks* ou caches existants.
 * **Pour une question de propreté:** après la phase d'initialisation d'un projet, il peut être utile de repartir sur un historique propre en supprimant les premiers *commits* liés à la phase de développement initiale.
-* **Pour repartir à zéro après une longue période:** après des changements importants, on peut souhaiter réinitialiser l'historique afin de repartir sur des bases claires et éviter toute confusion.
+* **Pour repartir sur des bases propres après une longue période de développement:** après des changements importants, on peut souhaiter réinitialiser l'historique afin de repartir sur des bases claires et éviter toute confusion.
 
-**⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche distante `main`. Si d'autres personnes collaborent sur ce projet, il est fortement recommandé qu'elles suppriment leur version locale et reclonent le dépôt (après manipulation) afin d'éviter des conflits majeurs.
+**⚠️ Attention:** cette opération est irréversible. Elle écrasera définitivement l'historique de la branche distante `main`. Si d'autres personnes collaborent sur ce projet, il est fortement recommandé qu'elles suppriment leur version locale et reclonent le dépôt une fois l'opération terminée afin d'éviter des conflits majeurs.
 
 **Prérequis:** effectuez une sauvegarde du dépôt dont vous souhaitez réinitialiser l'historique des *commits*.
 
@@ -26,7 +26,7 @@ Cette manipulation peut sembler inhabituelle, mais elle est bien plus fréquente
 
 # Description de la procédure:
 
-Assurez-vous de bien comprendre la manipulation ainsi que les implications de ce qui va être fait.
+Assurez-vous de bien comprendre l'opération ainsi que les implications de ce qui va être fait.
 
 ## 1. Nettoyage local:
 
@@ -48,7 +48,9 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-Cela supprime le répertoire `.git`, qui contient l'ensemble des métadonnées Git du dépôt: historique des *commits*, branches locales, tags et configuration associée.
+Cela supprime le répertoire `.git`, qui contient l'ensemble des métadonnées Git du dépôt: historique des *commits*, branches locales, *tags* et configuration associée.
+
+> Cette suppression concerne uniquement votre copie locale du dépôt. Le dépôt distant et son historique restent inchangés jusqu'à l'exécution de la commande `git push --force`.
 
 ### Étape 2, initialiser un nouveau dépôt Git:
 

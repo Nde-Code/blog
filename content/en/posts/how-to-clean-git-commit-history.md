@@ -1,5 +1,5 @@
 ---
-title: "How to completely reset a Git repository's history"
+title: "Recreate a project's Git history from its current state"
 date: 2026-06-25
 draft: false
 tags: ["Git", "GitHub", "DevOps"]
@@ -10,21 +10,21 @@ description: "It may come as a surprise, but this is an operation you'll occasio
 
 # Introduction:
 
-This guide explains how to completely reset a Git repository's history by removing the previous local Git history, recreating a clean repository, and then replacing the history of the remote repository.
+This guide explains how to recreate a project's Git history from its current state by deleting the Git metadata from the local repository, initializing a new repository, and then replacing the history of the remote `main` branch.
 
-Although this may seem like an unusual operation, it's more common than you might think. Typical use cases include:
+Although not common in day-to-day development, this operation is useful in several specific situations, for example:
 
-* **Accidentally exposing secrets:** always revoke them first (API keys, access tokens, passwords, etc.). Resetting the repository history helps remove them from the repository's visible history, but it **does not** guarantee that the data has disappeared from existing clones, forks, or caches.
+* **Accidentally exposing secrets:** always revoke them first (API keys, access tokens, passwords, etc.). Resetting the repository history helps remove them from the repository's visible history, but it **does not guarantee** that the data has disappeared from existing clones, forks, or caches.
 * **Cleaning up a project:** once the initial development phase is over, you may want to start with a clean history by removing the early work-in-progress commits.
 * **Starting fresh after major changes:** following a significant refactor or a long period of development, resetting the history can provide a clean baseline and make the repository easier to understand.
 
-**⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the remote `main` branch. If other people collaborate on this project, they should delete their local copy and clone the repository (after the process) again to avoid major conflicts.
+**⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the remote `main` branch. If other people collaborate on this project, they should delete their local copy and clone the repository again once the operation is complete.
 
 **Prerequisite:** make a backup of the repository before removing its commit history.
 
 > **Note:** this guide assumes that your default branch is `main` and that you'll be resetting its history. While `main` is now the standard default branch on platforms such as GitHub and GitLab, you should verify your repository first. If your default branch has a different name, simply replace `main` with the appropriate branch name in the commands throughout this guide. I'll point out the steps where this matters.
 
-# Procedure overview:
+# Procedure:
 
 Make sure you fully understand the process and the implications of the actions that will be performed.
 
@@ -49,6 +49,8 @@ rm -rf .git
 ```
 
 This removes the `.git` directory, which contains all Git metadata for the repository: commit history, local branches, tags, and associated configuration.
+
+> This removal only affects your local copy of the repository. The remote repository and its history remain unchanged until the `git push --force` command is executed.
 
 ### Step 2, reinitialize the Git repository:
 
