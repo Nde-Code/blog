@@ -91,7 +91,7 @@ Forcez ensuite l'envoi du nouvel historique vers le dépôt distant:
 git push -u origin main --force
 ```
 
-> ⚠️ Cette commande remplace définitivement l'historique du dépôt distant. Assurez-vous que tous les collaborateurs sont informés avant de l'exécuter.
+> ⚠️ Cette commande remplace définitivement l'historique du dépôt distant. Assurez-vous que tous les collaborateurs sont informés avant de l'exécuter. Les *forks* existants et les clones locaux conserveront l'historique précédent jusqu'à ce qu'ils soient supprimés ou réécrits.
 
 **Attention:** ici aussi, l'envoi est effectué vers `main`, c'est-à-dire la branche réinitialisée précédemment. Vérifiez impérativement que le nom de branche correspond bien à votre configuration.
 

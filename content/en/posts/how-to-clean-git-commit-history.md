@@ -91,7 +91,7 @@ Then, force push the new history to the remote repository:
 git push -u origin main --force
 ```
 
-> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware of this change before running it.
+> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware of this change before running it. Existing forks and local clones will retain the previous history until they are deleted or rewritten.
 
 **Warning:** as mentioned earlier, this guide assumes that `main` is the branch being reset. Make sure you use the correct branch name according to your repository configuration.
 
