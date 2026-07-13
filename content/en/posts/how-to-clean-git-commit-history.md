@@ -14,13 +14,13 @@ This guide explains how to recreate a project's Git history from its current sta
 
 Although not common in day-to-day development, this operation is useful in several specific situations, for example:
 
-* **Accidentally exposing secrets:** always revoke them first (API keys, access tokens, passwords, etc.). Resetting the repository history helps remove them from the repository's visible history, but it **does not guarantee** that the data has disappeared from existing clones, forks, or caches.
-* **Cleaning up a project:** once the initial development phase is over, you may want to start with a clean history by removing the early work-in-progress commits.
+* **Accidentally exposing secrets:** always revoke them first (API keys, access tokens, passwords, etc.). Resetting the repository history helps remove them from the repository's visible history, but it **does not guarantee** that the data has disappeared from existing clones, *forks*, or caches.
+* **Cleaning up a project:** once the initial development phase is over, you may want to start with a clean history by removing the early work-in-progress *commits*.
 * **Starting fresh after major changes:** following a significant refactor or a long period of development, resetting the history can provide a clean baseline and make the repository easier to understand.
 
 **⚠️ Warning:** this operation is irreversible. It will permanently overwrite the history of the remote `main` branch. If other people collaborate on this project, they should delete their local copy and clone the repository again once the operation is complete.
 
-**Prerequisite:** make a backup of the repository before removing its commit history.
+**Prerequisite:** make a backup of the repository before removing its *commit* history.
 
 > **Note:** this guide assumes that your default branch is `main` and that you'll be resetting its history. While `main` is now the standard default branch on platforms such as GitHub and GitLab, you should verify your repository first. If your default branch has a different name, simply replace `main` with the appropriate branch name in the commands throughout this guide. I'll point out the steps where this matters.
 
@@ -48,7 +48,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-This removes the `.git` directory, which contains all Git metadata for the repository: commit history, local branches, tags, and associated configuration.
+This removes the `.git` directory, which contains all Git metadata for the repository: *commit* history, local branches, tags, and associated configuration.
 
 > This removal only affects your local copy of the repository. The remote repository and its history remain unchanged until the `git push --force` command is executed.
 
@@ -66,7 +66,7 @@ Then, add all project files to the staging area:
 git add .
 ```
 
-Finally, create the first commit of this new repository:
+Finally, create the first *commit* of this new repository:
 ```bash
 git commit -m "chore: reset repository history and initialize fresh project state"
 ```
@@ -93,7 +93,7 @@ Then, force push the new history to the remote repository:
 git push -u origin main --force
 ```
 
-> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware of this change before running it. Existing forks and local clones will retain the previous history until they are deleted or rewritten.
+> ⚠️ This command permanently replaces the remote repository's history. Make sure all collaborators are aware of this change before running it. Existing *forks* and local clones will retain the previous history until they are deleted or rewritten.
 
 **Warning:** as mentioned earlier, this guide assumes that `main` is the branch being reset. Make sure you use the correct branch name according to your repository configuration.
 
@@ -104,4 +104,4 @@ git push origin --delete <branch_name>
 
 # Conclusion:
 
-Once this operation is complete, the remote `main` branch will contain a single commit representing the new initial state of the project. The previous history will no longer be available from the remote `main` branch.
+Once this operation is complete, the remote `main` branch will contain a single *commit* representing the new initial state of the project. The previous history will no longer be available from the remote `main` branch.

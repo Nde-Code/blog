@@ -38,7 +38,7 @@ sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
 
-> I won't go into detail about PPAs in this guide. I may cover them more thoroughly in a dedicated article in the future. For now, simply remember that a PPA (Personal Package Archive) is an additional software repository that provides newer package versions than those available in Ubuntu's official repositories.
+> I won't go into detail about PPAs in this guide. I may cover them more thoroughly in a dedicated article in the future. For now, simply remember that a PPA is an additional software repository that provides newer package versions than those available in Ubuntu's official repositories.
 
 ## 2. Install Wireshark:
 
