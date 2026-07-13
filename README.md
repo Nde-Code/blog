@@ -4,7 +4,7 @@ Ce dépôt contient le code de mon site statique dédié à mes articles et dida
 
 Le site est disponible en français et en anglais. Je prévois de publier chaque article dans ces deux langues, et éventuellement dans d'autres par la suite. Le contenu repose sur une structure simple: des métadonnées YAML standard et du Markdown pour la rédaction des articles.
 
-> L'objectif de ce dépôt est de me permettre de rédiger mes didacticiels et articles sans devoir tout coder en HTML, CSS et JavaScript, comme je le fais déjà pour mon site principal: [https://nde-code.github.io/](https://nde-code.github.io/). J'écris en Markdown, un format que j'apprécie particulièrement et l'ensemble est compilé et publié en quelques secondes.
+> L'objectif de ce dépôt est de me permettre de rédiger mes didacticiels et articles sans devoir tout coder en HTML, CSS et JavaScript, comme je le fais déjà pour mon site principal: [https://nde-code.github.io/](https://nde-code.github.io/). J'écris en Markdown, un format que j'apprécie particulièrement, et l'ensemble est automatiquement compilé puis publié en quelques secondes sur un site web accessible au public.
 
 ## ⚡ Installation rapide:
 
