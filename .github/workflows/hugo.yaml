@@ -61,14 +61,14 @@ jobs:
 
       # Step 2: Initialize the Go environment (needed for Hugo Modules).
       - name: Setup Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: ${{ env.GO_VERSION }}
           cache: false # Disable default caching to handle Hugo cache manually.
 
       # Step 3: Initialize Node.js environment.
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
 
