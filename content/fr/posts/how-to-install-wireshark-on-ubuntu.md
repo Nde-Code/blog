@@ -26,6 +26,8 @@ Ce guide explique comment installer Wireshark proprement, à jour et de manière
 
 Évitez le copier-coller systématique des commandes: comprendre leur rôle vous aidera à diagnostiquer plus facilement un éventuel problème.
 
+Notez aussi que, pour ce guide, je pars du principe que votre système est à jour, autrement dit que la commande `sudo apt update && sudo apt upgrade -y` a été exécutée, et que vous êtes également à l'aise avec les notions Linux (plus particulièrement sous Debian) ainsi qu'avec l'utilisation du terminal.
+
 ## 1. Ajouter le PPA Wireshark (version stable et récente):
 
 Pour notre installation, nous allons utiliser le PPA maintenu par l'équipe de développement de Wireshark.
@@ -38,7 +40,7 @@ sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
 
-> Je ne vais pas m'étendre davantage sur ce qu'est un PPA dans ce guide. J'en parlerai peut‑être de façon plus détaillée dans un article dédié. Pour l'instant, il suffit simplement de retenir qu'un PPA est un dépôt logiciel supplémentaire permettant d'obtenir des versions plus récentes que celles fournies par Ubuntu.
+> Je ne vais pas m'étendre davantage sur ce qu'est un PPA dans ce guide. J'en parlerai peut‑être de façon plus détaillée dans un article dédié. Pour l'instant, il suffit simplement de retenir qu'un PPA est un dépôt logiciel (supplémentaire) permettant d'obtenir des versions plus récentes que celles fournies par Ubuntu.
 
 ## 2. Installer Wireshark:
 
@@ -140,7 +142,7 @@ Commencez par créer le dossier local destiné aux lanceurs d'applications perso
 mkdir -p ~/.local/share/applications
 ```
 
-Copiez ensuite le fichier `.desktop` officiel de Wireshark dans ce dossier:
+Copiez ensuite le fichier `.desktop` de Wireshark dans ce dossier:
 ```bash
 cp /usr/share/applications/org.wireshark.Wireshark.desktop ~/.local/share/applications/
 ```
