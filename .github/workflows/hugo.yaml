@@ -39,7 +39,7 @@ jobs:
   # This job downloads dependencies and compiles the Markdown into HTML/CSS:
   build:
 
-    # Run on a clean, temporary Ubuntu environment.
+    # Run on a clean, temporary Ubuntu environment:
     runs-on: ubuntu-latest 
 
     # Define tool versions and environment variables:
@@ -52,37 +52,37 @@ jobs:
 
     steps:
 
-      # Step 1: Clone the repository source code onto the runner.
+      # Step 1: Clone the repository source code onto the runner:
       - name: Checkout
         uses: actions/checkout@v7
         with:
           submodules: recursive  # Fetch Git submodules if any exist.
           fetch-depth: 0         # Fetch all history for accurate file modification dates.
 
-      # Step 2: Initialize the Go environment (needed for Hugo Modules).
+      # Step 2: Initialize the Go environment (needed for Hugo Modules):
       - name: Setup Go
         uses: actions/setup-go@v7
         with:
           go-version: ${{ env.GO_VERSION }}
           cache: false # Disable default caching to handle Hugo cache manually.
 
-      # Step 3: Initialize Node.js environment.
+      # Step 3: Initialize Node.js environment:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Step 4: Configure the environment for GitHub Pages deployment.
+      # Step 4: Configure the environment for GitHub Pages deployment:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
 
-      # Step 5: Prepare a local directory for binaries (Dart Sass & Hugo).
+      # Step 5: Prepare a local directory for binaries (Dart Sass & Hugo):
       - name: Create directory for user-specific executable files
         run: |
           mkdir -p "${HOME}/.local"
 
-      # Step 6: Download and install Dart Sass compiler.
+      # Step 6: Download and install Dart Sass compiler:
       - name: Install Dart Sass
         run: |
           curl -sLO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
@@ -90,7 +90,7 @@ jobs:
           rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
 
-      # Step 7: Download and install Hugo Extended binary.
+      # Step 7: Download and install Hugo Extended binary:
       - name: Install Hugo
         run: |
           curl -sLO "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
@@ -99,7 +99,7 @@ jobs:
           rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
           echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
 
-      # Step 8: Log installed versions in the terminal console for debugging.
+      # Step 8: Log installed versions in the terminal console for debugging:
       - name: Verify installations
         run: |
           echo "Dart Sass: $(sass --version)"
@@ -107,7 +107,7 @@ jobs:
           echo "Hugo: $(hugo version)"
           echo "Node.js: $(node --version)"
 
-      # Step 9: Install project NPM dependencies if a package-lock.json exists.
+      # Step 9: Install project NPM dependencies if a package-lock.json exists:
       - name: Install Node.js dependencies
         run: |
           if [ -f package-lock.json ]; then
@@ -115,12 +115,12 @@ jobs:
             npm ci
           fi
 
-      # Step 10: Tweak Git configuration to prevent escaping non-ASCII characters in paths.
+      # Step 10: Tweak Git configuration to prevent escaping non-ASCII characters in paths:
       - name: Configure Git
         run: |
           git config --global core.quotepath false
 
-      # Step 11: Attempt to restore previous build caches to speed up the process.
+      # Step 11: Attempt to restore previous build caches to speed up the process:
       - name: Cache restore
         id: cache-restore
         uses: actions/cache/restore@v6
@@ -130,7 +130,7 @@ jobs:
           restore-keys: |
             hugo-
 
-      # Step 12: Run Hugo compiler to generate static files in the public/ folder.
+      # Step 12: Run Hugo compiler to generate static files in the public/ folder:
       - name: Build the site
         run: |
           hugo \
@@ -139,14 +139,14 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
 
-      # Step 13: Save the new build cache for future execution optimization.
+      # Step 13: Save the new build cache for future execution optimization:
       - name: Cache save
         uses: actions/cache/save@v6
         with:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
 
-      # Step 14: Zip and upload the public/ folder content as a GitHub Pages artifact.
+      # Step 14: Zip and upload the public/ folder content as a GitHub Pages artifact:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
@@ -167,7 +167,7 @@ jobs:
 
     steps:
     
-      # Step 1: Push the uploaded artifact live to your GitHub Pages URL.
+      # Step 1: Push the uploaded artifact live to your GitHub Pages URL:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
