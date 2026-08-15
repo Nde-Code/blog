@@ -10,15 +10,15 @@ Le site est disponible en français et en anglais. Je prévois de publier chaque
 
 ### Prérequis:
 
-Avant de lancer le projet, assurez-vous d'avoir installé :
+Avant de lancer le projet, assurez-vous d'avoir installé:
 
-- **Go** ([https://go.dev/](https://go.dev/)) : le langage de programmation nécessaire au fonctionnement de Hugo (version compatible avec ce dernier et les modules).
-- **Hugo Extended** ([https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/)) : qui inclut des fonctionnalités supplémentaires par rapport à la version standard.
-- **Node.js** ([https://nodejs.org/en](https://nodejs.org/en)) : pour les outils front-end éventuels.
+- **Go** ([https://go.dev/](https://go.dev/)): le langage de programmation nécessaire au fonctionnement de Hugo (version compatible avec ce dernier et les modules).
+- **Hugo Extended** ([https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/)): qui inclut des fonctionnalités supplémentaires par rapport à la version standard.
+- **Node.js** ([https://nodejs.org/en](https://nodejs.org/en)): pour les outils front-end éventuels.
 
-### Installation via GitHub Codespaces ou Devcontainer:
+### Installation via GitHub Codespaces:
 
-Le dépôt dispose d'un environnement de développement préconfiguré pour GitHub Codespaces. À l'ouverture :
+Le dépôt dispose d'un environnement de développement préconfiguré pour GitHub Codespaces. À l'ouverture:
 
 1. Le conteneur s'initialise automatiquement.
 2. Le thème Hugo est téléchargé ou mis à jour via la commande `hugo mod get -u`.
@@ -27,14 +27,14 @@ Le dépôt dispose d'un environnement de développement préconfiguré pour GitH
 ### Installation locale (depuis votre machine):
 
 1. Ouvrez un terminal à la racine du projet.
-2. Vérifiez votre environnement en exécutant : `bash env.sh`
+2. Vérifiez votre environnement en exécutant: `bash env.sh`
 3. Si le script indique que tout est correct, vous pouvez passer à la suite. Autrement, installez les outils manquants via les liens fournis dans les prérequis.
-4. Téléchargez ou mettez à jour les modules Hugo : `hugo mod get -u`
-5. Démarrez le serveur de développement local : `hugo server`
+4. Téléchargez ou mettez à jour les modules Hugo: `hugo mod get -u`
+5. Démarrez le serveur de développement local: `hugo server`
 
 ### Déploiement en ligne:
 
-Le projet intègre un *workflow* [GitHub Actions](https://docs.github.com/fr/actions) qui déploie automatiquement le site sur GitHub Pages à chaque nouvelle modification poussée (*push*) sur la branche `main`, le tout sans configuration préalable. 
+Le projet intègre un *workflow* [GitHub Actions](https://docs.github.com/fr/actions) qui déploie automatiquement le site sur [GitHub Pages](https://docs.github.com/en/pages) à chaque nouvelle modification poussée sur la branche `main`, le tout sans configuration préalable. 
 
 Le fichier de configuration est consultable ici: [.github/workflows/hugo.yaml](.github/workflows/hugo.yaml). Sa structure n'étant pas triviale, il est fortement recommandé de bien en comprendre le fonctionnement avant d'y apporter la moindre modification.
 
@@ -44,32 +44,32 @@ Les articles sont stockés dans le dossier `content/` et s'appuient sur un *arch
 
 - Chaque nouveau contenu doit inclure des métadonnées YAML dans son en-tête (*front matter*).
 - L'*archetype* par défaut se trouve dans [`archetypes/default.md`](archetypes/default.md).
-- Il génère automatiquement :
+- Il génère automatiquement:
    - Le titre (basé sur le nom du fichier).
    - La date du jour.
    - L'auteur.
    - Le statut de brouillon (`draft: true`).
 
-### Comment créer un nouvel article:
+### Pour créer un nouvel article:
 
-Vous pouvez procéder de deux manières différentes :
+Vous pouvez procéder de deux manières différentes:
 
 #### Méthode 1, automatiquement avec la commande Hugo:
 
-Exécutez la commande suivante dans votre terminal :
+Exécutez la commande suivante dans votre terminal:
 
 ```text
 hugo new <langue>/posts/mon-super-article.md
 ```
 
-*Exemple pour un article en anglais:* `hugo new en/posts/my-english-article.md`
+> Pour un article en anglais: `hugo new en/posts/my-english-article.md`
 
-Tout est généré automatiquement, il ne vous reste plus qu'à compléter le front matter YAML et à rédiger le texte.
+Tout est généré automatiquement, il ne vous reste plus qu'à compléter le *front matter* YAML et à rédiger le texte.
 
 #### Méthode 2, manuellement:
 
 1. Créez un nouveau fichier Markdown dans `content/en/posts/` ou `content/fr/posts/`.
-2. Ajoutez un en-tête YAML structuré comme ceci :
+2. Ajoutez un en-tête YAML structuré comme ceci:
 ```yaml
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
