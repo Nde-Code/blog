@@ -36,7 +36,7 @@ Le dépôt dispose d'un environnement de développement préconfiguré pour GitH
 
 Le projet intègre un *workflow* [GitHub Actions](https://docs.github.com/fr/actions) qui déploie automatiquement le site sur [GitHub Pages](https://docs.github.com/en/pages) à chaque nouvelle modification poussée sur la branche `main`, le tout sans configuration préalable. 
 
-Le fichier de configuration est consultable ici: [.github/workflows/hugo.yaml](.github/workflows/hugo.yaml). Sa structure n'étant pas triviale, il est fortement recommandé de bien en comprendre le fonctionnement avant d'y apporter la moindre modification.
+Le fichier de configuration est consultable ici: [.github/workflows/build_and_deploy.yaml](.github/workflows/build_and_deploy.yaml). Sa structure n'étant pas triviale, il est fortement recommandé de bien en comprendre le fonctionnement avant d'y apporter la moindre modification.
 
 ## 🏗️ Création de contenu:
 
@@ -91,7 +91,7 @@ Les dossiers et les fichiers du projet sont organisés comme suit:
 ```text
 ├── .github/
 │   ├── workflows/
-│   │   └── hugo.yaml      # Workflow GitHub Actions pour compiler et publier le blog.
+│   │   └── build_and_deploy.yaml      # Workflow GitHub Actions pour compiler et publier le blog.
 │   └── dependabot.yaml    # Configuration pour les mises à jour auto des dépendances.
 ├── .vscode/
 │   └── settings.json      # Configuration très simple de VS Code pour masquer les fichiers inutiles.
