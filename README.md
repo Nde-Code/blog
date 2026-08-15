@@ -91,7 +91,7 @@ Les dossiers et les fichiers du projet sont organisés comme suit:
 ```text
 ├── .github/
 │   ├── workflows/
-│   │   └── build_and_deploy.yaml      # Workflow GitHub Actions pour compiler et publier le blog.
+│   │   └── build_and_deploy.yaml # Workflow GitHub Actions pour compiler et publier le blog.
 │   └── dependabot.yaml    # Configuration pour les mises à jour auto des dépendances.
 ├── .vscode/
 │   └── settings.json      # Configuration très simple de VS Code pour masquer les fichiers inutiles.
