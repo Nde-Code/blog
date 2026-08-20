@@ -40,7 +40,7 @@ Le fichier de configuration est consultable ici: [.github/workflows/build_and_de
 
 ## 🏗️ Création de contenu:
 
-Les articles sont stockés dans le dossier `content/` et s'appuient sur un *archetype* (voir la [documentation Hugo](https://gohugo.io/content-management/archetypes/#article)) prédéfini pour faciliter la configuration initiale.
+Les articles sont stockés dans le dossier [`content/`](content/) et s'appuient sur un *archetype* (voir la [documentation Hugo](https://gohugo.io/content-management/archetypes/#article)) prédéfini pour faciliter la configuration initiale.
 
 - Chaque nouveau contenu doit inclure des métadonnées YAML dans son en-tête (*front matter*).
 - L'*archetype* par défaut se trouve dans [`archetypes/default.md`](archetypes/default.md).
@@ -68,7 +68,7 @@ Tout est généré automatiquement, il ne vous reste plus qu'à compléter le *f
 
 #### Méthode 2, manuellement:
 
-1. Créez un nouveau fichier Markdown dans `content/en/posts/` ou `content/fr/posts/`.
+1. Créez un nouveau fichier Markdown dans [`content/en/posts/`](content/en/posts/) ou [`content/fr/posts/`](content/fr/posts/).
 2. Ajoutez un en-tête YAML structuré comme ceci:
 ```yaml
 ---
