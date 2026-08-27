@@ -97,11 +97,6 @@ git push -u origin main --force
 
 **Attention:** ici aussi, l'envoi est effectué vers `main`, c'est-à-dire la branche réinitialisée précédemment. Vérifiez impérativement que le nom de branche correspond bien à votre configuration.
 
-**Note:** si vous souhaitez également supprimer les autres branches distantes, exécutez la commande suivante pour chacune d'elles:
-```bash
-git push origin --delete <nom_de_la_branche>
-```
-
 # Conclusion:
 
 Une fois ces étapes terminées, le dépôt distant ne contiendra plus qu'un unique *commit* correspondant au nouvel état initial du projet. L'ancien historique ne sera plus accessible depuis la branche principale du dépôt distant.
