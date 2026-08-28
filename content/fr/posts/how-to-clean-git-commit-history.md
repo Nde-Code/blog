@@ -34,7 +34,7 @@ Commencez par cloner le dépôt contenant la branche `main` à réinitialiser.
 
 > Le clonage permet de récupérer l'état actuel des fichiers du projet avant de supprimer l'ancien historique Git.
 
-Ensuite, ouvrez un terminal à la racine du projet, puis suivez les étapes ci-dessous et exécutez les commandes associées: 
+Ensuite, ouvrez un terminal à la racine du projet, puis suivez les étapes ci-dessous et exécutez les commandes associées:
 
 ### Étape 1, supprimer le dossier `.git`:
 

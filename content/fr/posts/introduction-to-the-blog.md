@@ -26,7 +26,7 @@ Cependant, étant donné la complexité de développement d'un site statique de 
 
 # Pourquoi Hugo et qu'est-ce que c'est donc ?
 
-[Hugo](https://gohugo.io/) est, comme mentionné précédemment, un générateur de sites web statiques. Cela signifie qu'il prend en entrée du code dynamique, un peu à la manière de Django, EJS, etc... mais qu'après compilation, on obtient tout simplement des fichiers web classiques. Cela accélère et facilite grandement le développement de sites statiques qui, lorsqu'ils sont faits entièrement à la main, demandent souvent beaucoup de répétitions et de copier-coller du même bloc de code. 
+[Hugo](https://gohugo.io/) est, comme mentionné précédemment, un générateur de sites web statiques. Cela signifie qu'il prend en entrée du code dynamique, un peu à la manière de Django, EJS, etc... mais qu'après compilation, on obtient tout simplement des fichiers web classiques. Cela accélère et facilite grandement le développement de sites statiques qui, lorsqu'ils sont faits entièrement à la main, demandent souvent beaucoup de répétitions et de copier-coller du même bloc de code.
 
 J'ai choisi Hugo pour plusieurs raisons:
 

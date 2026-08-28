@@ -22,7 +22,7 @@ Ce guide explique comment installer Wireshark proprement, à jour et de manière
 
 > Il a été rédigé après une installation sur un système Ubuntu (24.04.4 LTS), l'une des distributions Linux les plus utilisées, mais les principes restent similaires sur la majorité des distributions basées sur Debian.
 
-# Description de la procédure d'installation: 
+# Description de la procédure d'installation:
 
 Évitez le copier-coller systématique des commandes: comprendre leur rôle vous aidera à diagnostiquer plus facilement un éventuel problème.
 

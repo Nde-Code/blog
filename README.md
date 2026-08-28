@@ -34,7 +34,7 @@ Le dépôt dispose d'un environnement de développement préconfiguré pour GitH
 
 ### Déploiement en ligne:
 
-Le projet intègre un *workflow* [GitHub Actions](https://docs.github.com/fr/actions) qui déploie automatiquement le site sur [GitHub Pages](https://docs.github.com/en/pages) à chaque nouvelle modification poussée sur la branche `main`, le tout sans configuration préalable. 
+Le projet intègre un *workflow* [GitHub Actions](https://docs.github.com/fr/actions) qui déploie automatiquement le site sur [GitHub Pages](https://docs.github.com/en/pages) à chaque nouvelle modification poussée sur la branche `main`, le tout sans configuration préalable.
 
 Le fichier de configuration est consultable ici: [.github/workflows/build_and_deploy.yaml](.github/workflows/build_and_deploy.yaml). Sa structure n'étant pas triviale, il est fortement recommandé de bien en comprendre le fonctionnement avant d'y apporter la moindre modification.
 
