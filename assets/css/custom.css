@@ -1,0 +1,6 @@
+/* Hide menu items on mobile to prevent them from appearing truncated. */
+@media only screen and (max-width: 678px) {
+	.AppHeader-nav {
+		display: none !important;
+	}
+}
