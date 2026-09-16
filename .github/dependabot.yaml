@@ -8,7 +8,7 @@ updates:
       time: "04:15"
     open-pull-requests-limit: 5
     ignore:
-      # Requis par Hugo pour le thème ngs-primer; ce n'est pas une dépendance d'une application Go.
+      # Required by Hugo for the ngs-primer theme; it is not a dependency of a Go application.
       - dependency-name: "go.ngs.io/hugo-primer-blog"
     labels:
       - "dependencies"
