@@ -108,6 +108,8 @@ git push -u origin main --force
 
 This command permanently replaces the history of the remote repository. Make sure all collaborators are aware of this before running it. Existing *forks* and local clones may retain a copy of the old history even after it has been rewritten on the remote repository.
 
+Also ensure that the branch is not protected against *force‑pushes*, otherwise your remote host will reject the command.
+
 > **Note:** the push targets `main`, which is the remote branch you want to reset. Make absolutely sure that the branch name matches your repository configuration.
 
 ## 5. Bonus: remove the other remote branches:

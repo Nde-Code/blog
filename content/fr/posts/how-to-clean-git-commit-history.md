@@ -105,6 +105,8 @@ git push -u origin main --force
 
 Cette commande remplace définitivement l'historique du dépôt distant. Assurez-vous que tous les collaborateurs sont informés avant de l'exécuter. Les *forks* existants et les clones locaux peuvent conserver une copie de l'ancien historique, même après sa réécriture sur le dépôt distant.
 
+Veillez également à ce que la branche ne soit pas protégée contre les *force‑push*, sans quoi votre hébergeur distant refusera la commande.
+
 > **Note:** l'envoi est effectué vers `main`, c'est-à-dire la branche distante que vous souhaitez réinitialiser. Vérifiez impérativement que le nom de la branche correspond bien à votre configuration.
 
 ## 5. Bonus, supprimer les autres branches distantes:
