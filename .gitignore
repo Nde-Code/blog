@@ -10,9 +10,6 @@ _vendor/
 # Public build output (final generated site):
 public/
 
-# Node.js dependencies (auto-generated, very large, never commit):
-node_modules/
-
 # Application or tool logs (temporary debug files):
 *.log
 

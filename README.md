@@ -14,8 +14,6 @@ Before running the project, make sure you have installed:
 
 - **Hugo Extended** ([https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/)): which includes additional features compared to the standard version.
 
-- **Node.js** ([https://nodejs.org/en](https://nodejs.org/en)): used to provide access to development tools and dependencies distributed through npm when required.
-
 - **Git** ([https://git-scm.com/](https://git-scm.com/)): the version control tool used to clone repositories and push updates.
 
 > You only need to install these if you want to work locally instead of using GitHub Codespaces, as explained below.
@@ -140,7 +138,7 @@ The project folders and files are organized as follows:
 ├── static/                        # Static files (images, favicons, robots.txt, ...).
 │
 ├── .devcontainer.json             # GitHub Codespaces environment configuration.
-├── .gitignore                     # Files and folders ignored by Git (public/, node_modules/, ...).
+├── .gitignore                     # Files and folders ignored by Git (public/, resources/, ...).
 ├── LICENSE                        # Project distribution license.
 ├── README.md                      # Project documentation.
 ├── env.sh                         # Local development environment verification script.

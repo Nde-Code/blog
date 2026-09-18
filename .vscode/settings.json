@@ -4,7 +4,6 @@
 		"**/resources": true,
 		"**/_vendor": true,
 		"**/public": true,
-		"**/node_modules": true,
 		"**/.DS_Store": true,
 		"**/Thumbs.db": true
 	},
@@ -13,7 +12,6 @@
 		"**/resources": true,
 		"**/_vendor": true,
 		"**/public": true,
-		"**/node_modules": true,
 		"**/.DS_Store": true,
 		"**/Thumbs.db": true
 	},
