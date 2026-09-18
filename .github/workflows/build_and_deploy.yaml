@@ -1,61 +1,61 @@
 name: Build and deploy the blog
 
 on:
-  # Trigger on push to the main branch:
+  # Run workflow when changes are pushed to the main branch:
   push:
     branches:
       - main
 
-  # Allow manual trigger from the GitHub Actions user interface:
+  # Allow manual workflow execution from GitHub Actions:
   workflow_dispatch:
 
 permissions:
-  # Minimum security permissions required to interact with GitHub Pages:
-  contents: read # Needed to clone the repository content.
-  pages: write # Needed to deploy artifacts to GitHub Pages.
-  id-token: write # Needed to secure deployment authentication via OIDC.
+  # Required permissions for GitHub Pages deployment:
+  contents: read # Required to checkout repository contents.
+  pages: write # Required to publish the Pages artifact.
+  id-token: write # Required for OIDC-based deployment authentication.
 
 concurrency:
-  # Manage concurrent runs to avoid deployment conflicts:
+  # Prevent conflicting deployments from running simultaneously:
   group: pages
 
-  # Do not cancel a deployment already in progress:
+  # Keep active deployments running until completion:
   cancel-in-progress: false
 
 jobs:
-  # 1st job: building
-  # This job downloads dependencies and compiles the Markdown into HTML/CSS:
+  # 1st job: build
+  # This job installs dependencies and generates the static website:
   build:
-    # Run on a clean, temporary Ubuntu environment:
+    # Use ubuntu-latest runner for a consistent Linux build environment:
     runs-on: ubuntu-latest
 
-    # Define tool versions and environment variables:
+    # Define build tool versions and environment variables:
     env:
-      GO_VERSION: 1.26.4 # Required for Hugo Modules.
-      HUGO_VERSION: 0.163.3 # Hugo Extended version used for building.
-      TZ: Europe/Brussels # Set local timezone for consistent post dates.
+      GO_VERSION: 1.26.4 # Required by Hugo Modules.
+      HUGO_VERSION: 0.163.3 # Hugo Extended version used for site generation.
+      TZ: Europe/Brussels # Set timezone for consistent date handling.
 
     steps:
-      # Step 1: Clone the repository source code onto the runner:
+      # Step 1: Checkout repository sources:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          submodules: recursive # Fetch Git submodules if any exist.
-          fetch-depth: 0 # Fetch all history for accurate file modification dates.
+          submodules: recursive # Fetch Git submodules required by the project.
+          fetch-depth: 0 # Fetch full history for accurate Git metadata.
 
-      # Step 2: Initialize the Go environment (needed for Hugo Modules):
+      # Step 2: Set up Go environment required by Hugo Modules:
       - name: Setup Go
         uses: actions/setup-go@v7
         with:
           go-version: ${{ env.GO_VERSION }}
-          cache: false # Disable default Go caching.
+          cache: false # Disable Go dependency caching.
 
-      # Step 3: Configure the environment for GitHub Pages deployment:
+      # Step 3: Configure GitHub Pages deployment settings:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
 
-      # Step 4: Download and install Hugo Extended:
+      # Step 4: Install Hugo Extended:
       - name: Install Hugo
         run: |
           mkdir -p "${HOME}/.local/hugo"
@@ -64,13 +64,13 @@ jobs:
           rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
           echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
 
-      # Step 5: Log installed versions in the terminal console for debugging:
+      # Step 5: Display installed tool versions for debugging:
       - name: Verify installations
         run: |
           echo "Go: $(go version)"
           echo "Hugo: $(hugo version)"
 
-      # Step 6: Run Hugo compiler to generate static files in the public/ folder:
+      # Step 6: Build the static website with Hugo:
       - name: Build the site
         run: |
           hugo \
@@ -78,7 +78,7 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      # Step 7: Zip and upload the public/ folder content as a GitHub Pages artifact:
+      # Step 7: Upload generated site files as a GitHub Pages artifact:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
@@ -86,18 +86,20 @@ jobs:
           path: ./public
 
   # 2nd job: deploy
-  # This job takes the generated artifact and publishes it online:
+  # This job publishes the generated artifact to GitHub Pages:
   deploy:
+    # Use ubuntu-latest runner for deployment:
     runs-on: ubuntu-latest
-    needs: build # Wait for the build job to successfully finish first.
 
-    # Link the run to the official GitHub Pages environment:
+    needs: build # Wait for the build job to complete successfully.
+
+    # Associate deployment with the GitHub Pages environment:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # Step 1: Push the uploaded artifact live to your GitHub Pages URL:
+      # Step 1: Deploy the uploaded artifact to GitHub Pages:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
