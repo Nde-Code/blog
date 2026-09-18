@@ -38,7 +38,7 @@ The repository includes a preconfigured development environment for GitHub Codes
 
 3. If the script indicates that everything is correct, you can continue; otherwise, install the missing tools.
 
-4. Update the Hugo theme: `hugo mod get -u`.
+4. Run the following command to update the theme if a newer version is available: `hugo mod get -u`.
 
 5. Start the local development server: `hugo server`.
 
