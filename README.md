@@ -10,11 +10,11 @@ The website is available in both English and French. I plan to publish each arti
 
 Before running the project, make sure you have installed:
 
-- **Go** ([https://go.dev/](https://go.dev/)): the programming language required for Hugo (v0.146.0 or later) to work.
-
-- **Hugo Extended** ([https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/)): which includes additional features compared to the standard version.
-
 - **Git** ([https://git-scm.com/](https://git-scm.com/)): the version control tool used to clone repositories and push updates.
+
+- **Go** ([https://go.dev/](https://go.dev/)): the programming language required for Hugo to work.
+
+- **Hugo Extended v0.146.0 or later** ([https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/)): which includes additional features compared to the standard version.
 
 > You only need to install these if you want to work locally instead of using GitHub Codespaces, as explained below.
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 # Code formatted with https://www.codeclean.net/tools/bash/ using 4-space indentation.
 
-GREEN='33[0;32m'
-RED='33[0;31m'
-BLUE='33[0;34m'
-NC='33[0m'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+NC='\033[0m'
 
 echo -e "${BLUE}Hugo blog environment check: ${NC}"
 
