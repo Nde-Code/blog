@@ -1,0 +1,91 @@
+baseURL = "https://nde-code.github.io/blog/"
+title = "Nathan Debilloëz - blog"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[module]
+  [[module.imports]]
+    path = "go.ngs.io/hugo-primer-blog"
+
+[outputs]
+  home = ["HTML", "RSS", "LLMS"]
+  page = ["HTML", "Markdown"]
+
+# Sidebar:
+[[params.sidebarModules]]
+  partial = "aboutme"
+
+[[params.sidebarModules]]
+  partial = "recentPosts"
+
+[[params.sidebarModules]]
+  partial = "tags"
+
+[[params.sidebarModules]]
+  partial = "archive"
+
+# Settings:
+[params]
+  sidebar = true
+  recentPostsCount = 5
+  defaultTheme = "auto"
+  dateFormat = "02/01/2006"
+  showReadingTime = true
+  showAuthor = true
+  showShareButtons = true
+  primaryColor = "#1f6feb"
+
+  # Favicons (static/):
+  faviconIco = "favicon.ico"
+  faviconPng = "favicon.png"
+
+  # Social media:
+  [params.social]
+    github = "Nde-Code"
+    x = "nde_code"
+    reddit="nde_code"
+    kaggle = "nathandebilloez"
+
+# Navigation:
+[languages]
+
+  # English configuration:
+  [languages.en]
+    label = "English"
+    weight = 2
+    contentDir = "content/en"
+    title = "Nathan Debilloëz - blog"
+
+    [[languages.en.menus.main]]
+      name = "Contact"
+      url = "mailto:nathan.debilloez@outlook.com"
+      weight = 2
+    [[languages.en.menus.main]]
+      name = "Status"
+      url = "https://nde-status.instatus.com/"
+      weight = 3
+    [[languages.en.menus.main]]
+      name = "Source code"
+      url = "https://github.com/Nde-Code/blog"
+      weight = 4
+
+  # French configuration:
+  [languages.fr]
+    label = "Français"
+    weight = 1
+    contentDir = "content/fr"
+    title = "Nathan Debilloëz - blog"
+
+    [[languages.fr.menus.main]]
+      name = "Contact"
+      url = "mailto:nathan.debilloez@outlook.com"
+      weight = 2
+    [[languages.fr.menus.main]]
+      name = "Status"
+      url = "https://nde-status.instatus.com/"
+      weight = 3
+    [[languages.fr.menus.main]]
+      name = "Code source"
+      url = "https://github.com/Nde-Code/blog"
+      weight = 4

@@ -1,0 +1,79 @@
+{{- define "main" -}}
+<div class="Layout{{ if site.Params.sidebar }} Layout--sidebarPosition-end Layout--flowRow-until-md{{ end }}">
+    {{- if site.Params.sidebar -}}
+    <div class="Layout-main">
+        {{- end -}}
+        {{- with .Content -}}
+        <div class="markdown-body mb-4">
+            {{ . }}
+        </div>
+        {{- end -}}
+        <div class="Box">
+            <div class="Box-header">
+                <h2 class="Box-title">{{ i18n "latestPosts" | default "Latest Posts" }}</h2>
+            </div>
+            {{- $paginator := .Paginate (where .Site.RegularPages "Section" "posts") -}}
+            {{- range $paginator.Pages -}}
+            {{- $post := . -}}
+            <div class="Box-row">
+                <article class="d-flex flex-column flex-md-row">
+                    {{- with .Params.image -}}
+                    <div class="mr-md-3 mb-2 mb-md-0" style="flex-shrink: 0;">
+                        <a href="{{ $post.RelPermalink }}">
+                            {{- partial "featured-image.html" (dict "page" $post "class" "rounded-2" "style" "width: 200px; height: 120px; object-fit: cover;") -}}
+                        </a>
+                    </div>
+                    {{- end -}}
+                    <div class="flex-auto">
+                        <h3 class="f3 lh-condensed mb-1">
+                            <a href="{{ .RelPermalink }}" class="Link--primary">{{ .Title }}</a>
+                        </h3>
+                        {{- $hasDate := not .Date.IsZero -}}
+                        {{- $hasReadingTime := and site.Params.showReadingTime (ne .Params.hideReadingTime true) -}}
+                        {{- $hasAuthor := .Params.author -}}
+                        {{- if or $hasDate $hasReadingTime $hasAuthor -}}
+                        <div class="d-flex flex-items-center color-fg-muted f6 mb-2">
+                            {{- if $hasDate -}}
+                            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                                {{ .Date.Format (site.Params.dateFormat | default "2006-01-02") }}
+                            </time>
+                            {{- end -}}
+                            {{- if $hasReadingTime -}}
+                            {{- if $hasDate -}}
+                            <span class="mx-2">&middot;</span>{{- end -}}
+                            <span>{{ .ReadingTime }} {{ i18n "minRead" | default "min read" }}</span>
+                            {{- end -}}
+                            {{- if $hasAuthor -}}
+                            {{- if or $hasDate $hasReadingTime -}}
+                            <span class="mx-2">&middot;</span>{{- end -}}
+                            <span>{{ .Params.author }}</span>
+                            {{- end -}}
+                        </div>
+                        {{- end -}}
+                        {{- with .Description | default .Summary -}}
+                        <p class="color-fg-muted mb-2">{{ . | plainify | truncate 200 }}</p>
+                        {{- end -}}
+                        {{- with .Params.tags -}}
+                        <div class="d-flex flex-wrap">
+                            {{- range . -}}
+                            {{- $tagName := . -}}
+                            {{- with site.GetPage (printf "tags/%s" ($tagName | urlize)) -}}
+                            <a href="{{ .RelPermalink }}" class="Label Label--secondary mr-1 mb-1">{{ $tagName }}</a>
+                            {{- end -}}
+                            {{- end -}}
+                        </div>
+                        {{- end -}}
+                    </div>
+                </article>
+            </div>
+            {{- end -}}
+        </div>
+        {{- partial "pagination.html" $paginator -}}
+        {{- if site.Params.sidebar -}}
+    </div>
+    <div class="Layout-sidebar">
+        {{- partial "sidebar.html" . -}}
+    </div>
+    {{- end -}}
+</div>
+{{- end -}}
