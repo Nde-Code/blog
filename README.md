@@ -51,7 +51,7 @@ If you prefer to work locally, make sure you have the following installed before
 | **[Go](https://go.dev/)** | The programming language required to use this project, as it relies on Hugo Modules. |
 | **[Hugo](https://gohugo.io/)** (standard, v0.146.0 or later) | The Hugo edition and minimum version required to build and run the project. |
 
-> 🐧 Working on Linux is recommended for this project. If you are using Windows, use [WSL](https://github.com/microsoft/WSL).
+> 🐧 Using Linux is recommended (and required to run the environment checking script) for this project. If you are using Windows, use [WSL](https://github.com/microsoft/WSL).
 
 **Linux setup:**
 
