@@ -44,7 +44,7 @@ I chose Hugo for several reasons:
 
 - **It's highly flexible and feature-rich:** Hugo offers a wide range of themes, modules, and tools that can be used to extend its capabilities. It also benefits from an active community and a well-established reputation built up over many years.
 
-# The Theme I Chose — and Why?
+# The Theme I Chose, and Why?
 
 The theme I'm using wasn't created by me. It was very generously made available by **Atsushi Nagase**.
 

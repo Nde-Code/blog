@@ -26,7 +26,7 @@ This guide explains how to install Wireshark on Ubuntu in a clean, up-to-date, a
 
 Avoid blindly copying and pasting commands: understanding what they do will make it easier to diagnose potential issues.
 
-For this guide, I also assume that your system is up to date — in other words, that `sudo apt update && sudo apt upgrade -y` has already been run — and that you are reasonably comfortable using Linux and the terminal.
+For this guide, I also assume that your system is up to date, in other words, that `sudo apt update && sudo apt upgrade -y` has already been run, and that you are reasonably comfortable using Linux and the terminal.
 
 ## 1. Add the Wireshark PPA:
 

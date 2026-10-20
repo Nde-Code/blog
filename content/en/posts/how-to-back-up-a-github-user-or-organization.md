@@ -1,5 +1,5 @@
 ---
-title: "How to Back Up a GitHub User or Organization on Linux/WSL"
+title: "How to Back Up a GitHub User or Organization on Linux"
 date: 2026-10-19
 draft: false
 tags: ["GitHub", "Python", "pipx", "Linux", "DevOps"]
@@ -78,7 +78,7 @@ For example, an output such as `Python 3.12.3` is fine. If your version is older
 
 ## 3. Install `python-github-backup`:
 
-We will now install the backup tool. The project is available on GitHub: [https://github.com/josegonzalez/python-github-backup](https://github.com/josegonzalez/python-github-backup)
+We will now install the backup tool. The project is available on GitHub: [https://github.com/josegonzalez/python-github-backup](https://github.com/josegonzalez/python-github-backup).
 
 It offers many options for choosing which data to retrieve. We will use them in our Bash script later on.
 
@@ -110,7 +110,7 @@ In GitHub, open your account settings and go to:
 
 _Settings_ → _Developer settings_ → _Personal access tokens_ → _Fine-grained tokens_
 
-You can also go directly to this page: [https://github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens)
+You can also go directly to this page: [https://github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens).
 
 Create a new token and give it a descriptive name, for example `github-backup-linux`. Then choose the account that owns the data to be backed up.
 

@@ -1,5 +1,5 @@
 ---
-title: "Comment sauvegarder un utilisateur ou une organisation GitHub sous Linux/WSL"
+title: "Comment sauvegarder un utilisateur ou une organisation GitHub sous Linux"
 date: 2026-10-19
 draft: false
 tags: ["GitHub", "Python", "pipx", "Linux", "DevOps"]
