@@ -14,11 +14,11 @@ description: "A complete, secure, and reproducible guide to installing Wireshark
 
 - **Simple to get started:** its intuitive interface makes it easy to perform your first packet captures quickly.
 
-- **Free and *open source*:** the project is completely free and *open source*. Its source code is available on [GitLab](https://gitlab.com/wireshark/wireshark) and mirrored on [GitHub](https://github.com/wireshark/wireshark). This transparency makes security audits easier and contributes to the software's continuous improvement.
+- **Free and _open source_:** the project is completely free and _open source_. Its source code is available on [GitLab](https://gitlab.com/wireshark/wireshark) and mirrored on [GitHub](https://github.com/wireshark/wireshark). This transparency makes security audits easier and contributes to the software's continuous improvement.
 
 - **Extremely comprehensive and optimized:** Wireshark supports hundreds of network protocols, from the most common to highly specialized ones. It provides detailed analysis down to the hexadecimal or binary level and offers many advanced features, including powerful filters, detailed statistics, stream reconstruction, anomaly detection, and more. It therefore meets the needs of everyone from beginners to experienced professionals.
 
-This guide explains how to install Wireshark on Ubuntu in a clean, up-to-date, and secure manner, while allowing packet capture **without `sudo`** by using the `wireshark` group and the Linux *capabilities* assigned to the `dumpcap` binary.
+This guide explains how to install Wireshark on Ubuntu in a clean, up-to-date, and secure manner, while allowing packet capture **without `sudo`** by using the `wireshark` group and the Linux _capabilities_ assigned to the `dumpcap` binary.
 
 > This guide was written after installing Wireshark on an Ubuntu system (24.04.4 LTS), one of the most widely used Linux distributions. However, the same principles generally apply to most Debian-based distributions.
 
@@ -30,9 +30,9 @@ For this guide, I also assume that your system is up to date, in other words, th
 
 ## 1. Add the Wireshark PPA:
 
-For this installation, we will use the *PPA* maintained by the Wireshark development team.
+For this installation, we will use the _PPA_ maintained by the Wireshark development team.
 
-This *PPA* provides newer stable releases, which are often more up to date than the versions available in the standard Ubuntu repositories.
+This _PPA_ provides newer stable releases, which are often more up to date than the versions available in the standard Ubuntu repositories.
 
 To add it to your system, run the following commands one at a time. They require administrator privileges:
 
@@ -41,7 +41,7 @@ sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
 ```
 
-I won't go into further detail about how a *PPA* works in this guide. I may cover the topic in more depth in a dedicated article. For now, all you need to know is that a *PPA* is an additional software repository that can, among other things, provide newer versions of certain applications than those available in Ubuntu's official repositories.
+I won't go into further detail about how a _PPA_ works in this guide. I may cover the topic in more depth in a dedicated article. For now, all you need to know is that a _PPA_ is an additional software repository that can, among other things, provide newer versions of certain applications than those available in Ubuntu's official repositories.
 
 ## 2. Install Wireshark:
 
@@ -59,13 +59,13 @@ It is recommended to answer: `Yes`
 
 > If you answer `No`, you can still change this setting later by reconfiguring the `wireshark-common` package.
 
-This option enables a secure and modern configuration: only `dumpcap` is granted the Linux *capabilities* required for packet capture (`CAP_NET_RAW` and `CAP_NET_ADMIN`), while the graphical interface runs without any special privileges.
+This option enables a secure and modern configuration: only `dumpcap` is granted the Linux _capabilities_ required for packet capture (`CAP_NET_RAW` and `CAP_NET_ADMIN`), while the graphical interface runs without any special privileges.
 
 ## 3. Add Yourself to the `wireshark` Group:
 
 To capture packets **without using `sudo`**, you need to add your user (`$USER`) to the `wireshark` system group. This group is specifically intended to grant the permissions required for packet capture without giving Wireshark administrator privileges.
 
-On Linux, a *group* is a collection of users to which specific permissions can be assigned. The `wireshark` group allows network capture without granting full administrator privileges.
+On Linux, a _group_ is a collection of users to which specific permissions can be assigned. The `wireshark` group allows network capture without granting full administrator privileges.
 
 To do this, run the following command:
 
@@ -79,7 +79,7 @@ Once the command has been executed, the changes will only take effect after logg
 
 After adding your user to the `wireshark` group, it is important to verify that the configuration has been applied as expected.
 
-We will therefore check the *capabilities* assigned to the `dumpcap` capture engine, the Wireshark component responsible for network capture and the one that receives the necessary privileges.
+We will therefore check the _capabilities_ assigned to the `dumpcap` capture engine, the Wireshark component responsible for network capture and the one that receives the necessary privileges.
 
 To do this, run the following command:
 
@@ -87,11 +87,11 @@ To do this, run the following command:
 getcap /usr/bin/dumpcap
 ```
 
-This command displays the *capabilities* currently assigned to `dumpcap`. You should find the network permissions required for packet capture among them.
+This command displays the _capabilities_ currently assigned to `dumpcap`. You should find the network permissions required for packet capture among them.
 
 With this configuration, Wireshark can perform packet captures through its graphical interface without requiring administrator privileges.
 
-If the command returns no output, it means that the *capabilities* have not been assigned to `dumpcap`. In that case, you need to reconfigure the `wireshark-common` package.
+If the command returns no output, it means that the _capabilities_ have not been assigned to `dumpcap`. In that case, you need to reconfigure the `wireshark-common` package.
 
 > You can also verify that your user belongs to the `wireshark` group by running: `groups | grep "wireshark"`. If the terminal displays `wireshark` (often highlighted in color depending on your theme), it means that the group membership has been configured correctly.
 
@@ -117,18 +117,18 @@ You can also verify that `dumpcap` can access the available network interfaces:
 dumpcap -D
 ```
 
-This command lists the capture interfaces detected by `dumpcap`. If they are displayed correctly, this confirms that the capture engine has the permissions required to access them. You can then pin Wireshark to the Ubuntu *Dock* or launch it directly from the application search bar.
+This command lists the capture interfaces detected by `dumpcap`. If they are displayed correctly, this confirms that the capture engine has the permissions required to access them. You can then pin Wireshark to the Ubuntu _Dock_ or launch it directly from the application search bar.
 
 If not, it is possible that one of the configuration steps was not applied correctly. In that case, check the following:
 
 - your membership in the `wireshark` group;
-- the *capabilities* assigned to `dumpcap`;
-- the presence and configuration of the Wireshark *PPA*;
+- the _capabilities_ assigned to `dumpcap`;
+- the presence and configuration of the Wireshark _PPA_;
 - whether all required packages have been installed correctly.
 
 # Conclusion:
 
-You now have a clean, secure Wireshark installation that follows Linux best practices. Using the `wireshark` group and the *capabilities* assigned to `dumpcap` allows you to capture packets **without relying on `sudo`**, while maintaining a high level of security.
+You now have a clean, secure Wireshark installation that follows Linux best practices. Using the `wireshark` group and the _capabilities_ assigned to `dumpcap` allows you to capture packets **without relying on `sudo`**, while maintaining a high level of security.
 
 # Sources:
 

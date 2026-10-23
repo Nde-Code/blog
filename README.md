@@ -45,11 +45,11 @@ The repository includes a preconfigured development environment for GitHub Codes
 
 If you prefer to work locally, make sure you have the following installed before running the project:
 
-| Tool | Description |
-| --- | --- |
-| **[Git](https://git-scm.com/)** | The version control tool used to clone repositories and push updates. |
-| **[Go](https://go.dev/)** | The programming language required to use this project, as it relies on Hugo Modules. |
-| **[Hugo](https://gohugo.io/)** (standard, v0.146.0 or later) | The Hugo edition and minimum version required to build and run the project. |
+| Tool                                                         | Description                                                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| **[Git](https://git-scm.com/)**                              | The version control tool used to clone repositories and push updates.                |
+| **[Go](https://go.dev/)**                                    | The programming language required to use this project, as it relies on Hugo Modules. |
+| **[Hugo](https://gohugo.io/)** (standard, v0.146.0 or later) | The Hugo edition and minimum version required to build and run the project.          |
 
 > 🐧 Using Linux is recommended (and required to run the environment checking script) for this project. If you are using Windows, use [WSL](https://github.com/microsoft/WSL).
 
@@ -88,10 +88,10 @@ The deployment file can be viewed here: [`.github/workflows/build_and_deploy.yam
 
 ## 🏗️ Content creation
 
-Articles are stored in the [`content/`](content/) folder and rely on a predefined *archetype* to simplify the initial configuration.
+Articles are stored in the [`content/`](content/) folder and rely on a predefined _archetype_ to simplify the initial configuration.
 
-- Each new article must include YAML metadata in its header (*front matter*).
-- The default *archetype* is located at [`archetypes/default.md`](archetypes/default.md).
+- Each new article must include YAML metadata in its header (_front matter_).
+- The default _archetype_ is located at [`archetypes/default.md`](archetypes/default.md).
 - It automatically generates:
   - the title (based on the filename),
   - the article creation date,
@@ -123,7 +123,7 @@ For a French article:
 hugo new content/fr/posts/my-french-article.md
 ```
 
-Hugo automatically generates the file with the required *front matter*. You only need to complete the YAML *front matter* and write the content.
+Hugo automatically generates the file with the required _front matter_. You only need to complete the YAML _front matter_ and write the content.
 
 **Method 2 — Manually:**
 

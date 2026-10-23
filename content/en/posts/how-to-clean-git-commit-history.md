@@ -10,19 +10,19 @@ description: "It may sound unusual, but this is an operation that can sometimes 
 
 # Introduction:
 
-This guide explains how to **start fresh from a project's current state while removing its existing Git history**. The goal is to keep the files exactly as they are today, then rebuild the repository history from that state with a single initial *commit*.
+This guide explains how to **start fresh from a project's current state while removing its existing Git history**. The goal is to keep the files exactly as they are today, then rebuild the repository history from that state with a single initial _commit_.
 
 While this is not something you would normally do on a daily basis, it can be useful in a few specific situations, for example:
 
-- **If you have exposed secrets:** always revoke them first (API keys, tokens, passwords, etc.). Resetting the repository removes this information from the visible history, but it **does not guarantee** that the data has disappeared from every existing clone, *fork*, or cache.
+- **If you have exposed secrets:** always revoke them first (API keys, tokens, passwords, etc.). Resetting the repository removes this information from the visible history, but it **does not guarantee** that the data has disappeared from every existing clone, _fork_, or cache.
 
-- **For the sake of cleanliness:** after the initial setup of a project, you may want to start with a clean history by removing the first few *commits* associated with the initial development phase.
+- **For the sake of cleanliness:** after the initial setup of a project, you may want to start with a clean history by removing the first few _commits_ associated with the initial development phase.
 
 - **To start fresh after a long development period:** following significant changes, you may want to reset the history in order to establish a clean baseline and avoid unnecessary confusion.
 
 The procedure consists of creating a new Git repository locally from the project's current state, setting `main` as the primary branch, and then replacing the `main` branch of the remote repository with this new branch.
 
-**Prerequisite:** make sure to create a backup of the repository whose *commit* history you intend to reset.
+**Prerequisite:** make sure to create a backup of the repository whose _commit_ history you intend to reset.
 
 **⚠️ Warning:** this operation rewrites the history of the remote `main` branch. Once the `push` has been performed, the old history will no longer be accessible from that branch. If other people collaborate on the project, make sure to inform them about the operation so they can delete their local copy and clone the repository again once the reset is complete.
 
@@ -56,7 +56,7 @@ Remove-Item -Recurse -Force .git
 rm -rf .git
 ```
 
-This removes the `.git` directory, which contains the repository's Git metadata, including its *commit* history, local branches, *tags*, and associated configuration.
+This removes the `.git` directory, which contains the repository's Git metadata, including its _commit_ history, local branches, _tags_, and associated configuration.
 
 > This only affects your local copy of the repository. The remote repository and its history remain unchanged until the `push` performed in step 4.
 
@@ -76,7 +76,7 @@ Then add all the project's files:
 git add .
 ```
 
-Finally, create the first *commit*:
+Finally, create the first _commit_:
 
 ```bash
 git commit -m "chore: reset repository history and initialize fresh project state"
@@ -106,9 +106,9 @@ Then force-push the new history to the remote repository:
 git push -u origin main --force
 ```
 
-This command permanently replaces the history of the remote repository. Make sure all collaborators are aware of this before running it. Existing *forks* and local clones may retain a copy of the old history even after it has been rewritten on the remote repository.
+This command permanently replaces the history of the remote repository. Make sure all collaborators are aware of this before running it. Existing _forks_ and local clones may retain a copy of the old history even after it has been rewritten on the remote repository.
 
-Also ensure that the branch is not protected against *force‑pushes*, otherwise your remote host will reject the command.
+Also ensure that the branch is not protected against _force‑pushes_, otherwise your remote host will reject the command.
 
 > **Note:** the push targets `main`, which is the remote branch you want to reset. Make absolutely sure that the branch name matches your repository configuration.
 
@@ -122,6 +122,6 @@ git push origin --delete <branch_name>
 
 # Conclusion:
 
-Once these steps are complete, the `main` branch of the remote repository will point to the new initial *commit* created from the project's current state. The old history will no longer be accessible from that branch.
+Once these steps are complete, the `main` branch of the remote repository will point to the new initial _commit_ created from the project's current state. The old history will no longer be accessible from that branch.
 
 Any other remote branches, if they exist, are not affected by this operation. If necessary, they will need to be deleted (see step 5) or rewritten separately.

@@ -38,7 +38,7 @@ Cette approche facilite et accélère grandement le développement de sites stat
 
 J'ai choisi Hugo pour plusieurs raisons:
 
-- **Il est *open source*:** c'est un écosystème que j'affectionne particulièrement et auquel je préfère naturellement contribuer et faire confiance.
+- **Il est _open source_:** c'est un écosystème que j'affectionne particulièrement et auquel je préfère naturellement contribuer et faire confiance.
 
 - **Il est extrêmement rapide:** développé en Go, Hugo génère les pages d'un site à une vitesse impressionnante. Même sur des projets relativement conséquents, la génération ne prend généralement que quelques instants.
 
@@ -64,7 +64,7 @@ Bref, pourquoi chercher plus loin quand quelque chose me plaît déjà ?
 
 # Le code source du projet:
 
-Comme pour la plupart de mes projets personnels, l'intégralité du code source est disponible en *open source*.
+Comme pour la plupart de mes projets personnels, l'intégralité du code source est disponible en _open source_.
 
 Le dépôt ne contient évidemment rien de particulièrement intéressant, mais il permet notamment de retrouver la configuration complète de Hugo ainsi que les différentes modifications que j'ai apportées au thème. Si cela vous intéresse, l'ensemble du projet est disponible sur mon GitHub: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog).
 
@@ -82,4 +82,4 @@ Malgré tout, ces outils ne sont pas infaillibles et il est donc tout à fait po
 
 J'utilise principalement [Scribens](https://www.scribens.fr/) et [Reverso](https://www.reverso.net/orthographe/correcteur-francais/) pour m'aider dans cette tâche.
 
-> L'ouverture d'une *pull request* ou d'une *issue* sur le dépôt GitHub reste de loin le meilleur moyen de me signaler une correction.
+> L'ouverture d'une _pull request_ ou d'une _issue_ sur le dépôt GitHub reste de loin le meilleur moyen de me signaler une correction.

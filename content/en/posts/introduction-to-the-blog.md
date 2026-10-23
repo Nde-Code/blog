@@ -38,7 +38,7 @@ This approach makes developing static websites considerably easier and faster. W
 
 I chose Hugo for several reasons:
 
-- **It's *open source*:** this is an ecosystem I particularly appreciate, and one I naturally prefer to support and trust.
+- **It's _open source_:** this is an ecosystem I particularly appreciate, and one I naturally prefer to support and trust.
 
 - **It's extremely fast:** written in Go, Hugo generates website pages at an impressive speed. Even for relatively large projects, the build process generally takes only a few moments.
 
@@ -64,7 +64,7 @@ In short, why look any further when you've already found something you like?
 
 # The Project's Source Code:
 
-As with most of my personal projects, the entire source code is available as *open source*.
+As with most of my personal projects, the entire source code is available as _open source_.
 
 The repository obviously doesn't contain anything particularly exciting, but it does provide the complete Hugo configuration along with the various modifications I've made to the theme. If you're interested, the entire project is available on my GitHub: [https://github.com/Nde-Code/blog](https://github.com/Nde-Code/blog).
 
@@ -82,4 +82,4 @@ Even so, these tools aren't infallible, so it's entirely possible that a typo or
 
 I mainly use [Scribens](https://www.scribens.fr/) and [Reverso](https://www.reverso.net/orthographe/correcteur-anglais/) to help me with this.
 
-> Opening a *pull request* or an *issue* on the GitHub repository is by far the best way to report a correction to me.
+> Opening a _pull request_ or an _issue_ on the GitHub repository is by far the best way to report a correction to me.
