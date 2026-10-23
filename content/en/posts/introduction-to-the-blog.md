@@ -80,6 +80,6 @@ I'm certainly not going to pretend that my spelling is flawless. I therefore reg
 
 Even so, these tools aren't infallible, so it's entirely possible that a typo or mistake may occasionally slip through into an article. If you spot one, please don't hesitate to let me know.
 
-I mainly use [Scribens](https://www.scribens.fr/) and [Reverso](https://www.reverso.net/orthographe/correcteur-francais/) to help me with this.
+I mainly use [Scribens](https://www.scribens.fr/) and [Reverso](https://www.reverso.net/orthographe/correcteur-anglais/) to help me with this.
 
 > Opening a *pull request* or an *issue* on the GitHub repository is by far the best way to report a correction to me.
