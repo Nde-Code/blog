@@ -1,5 +1,6 @@
 // dprint configuration: https://dprint.dev/
-// Install the configured plugins with `dprint install` before running `dprint fmt`.
+// Install the configured plugins by running `dprint install` before formatting.
+// Update the configuration with `dprint config update`, or preview available updates with `dprint config update --dry-run`.
 {
     "$schema": "https://dprint.dev/schemas/v0.json",
     "lineWidth": 100,
