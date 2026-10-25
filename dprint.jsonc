@@ -4,6 +4,7 @@
 {
     "$schema": "https://dprint.dev/schemas/v0.json",
     "lineWidth": 100,
+    "indentWidth": 4,
     "useTabs": false,
     "newLineKind": "lf",
     "includes": [
@@ -17,23 +18,11 @@
     "excludes": [
         "archetypes/default.md"
     ],
-    "markdown": {
-        "lineWidth": 100
-    },
-    "json": {
-        "indentWidth": 4,
-        "useTabs": false,
-        "lineWidth": 100
-    },
-    "malva": {
-        "indentWidth": 4
-    },
     "yaml": {
         "indentWidth": 2
     },
     "toml": {
-        "indentWidth": 2,
-        "lineWidth": 100
+        "indentWidth": 2
     },
     "plugins": [
         "npm:@dprint/markdown@0.28.0",
