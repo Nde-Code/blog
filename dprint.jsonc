@@ -1,0 +1,34 @@
+// dprint configuration: https://dprint.dev/
+// Install the configured plugins by running `dprint install` before formatting.
+// Update the configuration with `dprint config update`, or preview available updates with `dprint config update --dry-run`.
+{
+    "$schema": "https://dprint.dev/schemas/v0.json",
+    "lineWidth": 100,
+    "indentWidth": 4,
+    "useTabs": false,
+    "newLineKind": "lf",
+    "includes": [
+        "**/*.md",
+        "**/*.json",
+        "**/*.css",
+        "**/*.yaml",
+        "**/*.yml",
+        "**/*.toml"
+    ],
+    "excludes": [
+        "archetypes/default.md"
+    ],
+    "yaml": {
+        "indentWidth": 2
+    },
+    "toml": {
+        "indentWidth": 2
+    },
+    "plugins": [
+        "npm:@dprint/markdown@0.28.0",
+        "npm:@dprint/json@0.25.2",
+        "npm:dprint-plugin-malva@0.16.0",
+        "npm:dprint-plugin-yaml@0.6.0",
+        "npm:@dprint/toml@0.9.0"
+    ]
+}
