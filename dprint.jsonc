@@ -16,7 +16,8 @@
         "**/*.toml"
     ],
     "excludes": [
-        "archetypes/default.md"
+        "archetypes/default.md",
+        "CODE_OF_CONDUCT.md"
     ],
     "yaml": {
         "indentWidth": 2
